@@ -1,4 +1,4 @@
-.consent-page-wrapper {
+.consent_page_wrapper {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,34 +8,33 @@
     flex-direction: column;
 }
 
-.consent-page-header {
+.consent_page_header {
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.consent-page-header h1 {
+.consent_page_header h1 {
     font-size: 28px;
     font-weight: 500;
 }
 
-.consent-page-agreement {
+.consent_page_agreement {
     flex: 1;
 }
 
-.consent-page-agreement p {
+.consent_page_agreement p {
     padding: 15px;
 }
 
-.consent-page-agreement-btns {
-    /* border: 1px solid red; */
+.consent_page_agreement_btns {
     height: 80px;
     display: flex;
     justify-content: center;
 }
 
-.consent-page-agreement-btns button {
+.consent_page_agreement_btns button {
     font-size: 22px;
     font-weight: bold;
     background-color: #386F3E;
@@ -47,14 +46,24 @@
 }
 
 @media only screen and (max-width: 610px) {
-    .consent-page-header h1 {
+    .consent_page_header h1 {
         font-size: 20px;
         font-weight: 500;
     }
 
-    .consent-page-agreement-btns button {
+    .consent_page_agreement_btns button {
         font-size: 18px;
         padding: 0 20px;
         margin: 15px 10px;
     }
-  }
+}
+
+@media only screen and (max-width: 450px) {
+    .consent_page_header h1 {
+        font-size: 18px;
+    }
+
+    .consent_page_agreement_btns button {
+        font-size: 15px;
+    }
+}
