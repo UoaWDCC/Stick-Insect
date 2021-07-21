@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 
 // Setup Express
 const app = express();
@@ -15,5 +16,5 @@ app.use(express.json());
 app.get('/',(req,res) => {
     res.status(200).json("hello");
 })
-
-app.listen(port, ()=> console.log(`App server listening on port ${port}!`));
+mongoose. connect('mongodb://localhost:27017/stins', {useNewUrlParser: true})
+    .then(() => app.listen(port, ()=> console.log(`App server listening on port ${port}!`)));
