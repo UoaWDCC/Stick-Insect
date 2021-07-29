@@ -10,6 +10,7 @@ including the Heading, the main text component, and the Button + 2 icons*/
     height: 100vh;
     font-size: 30px;
     text-align: center;
+    color: black;
     
     display: flex;
     flex-direction: column;
