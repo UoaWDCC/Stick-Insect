@@ -5,7 +5,6 @@ import mongoose from 'mongoose';
 const app = express();
 const port = process.env.PORT || 3001;
 
-
 // Setup body-parser
 app.use(express.json());
 
