@@ -10,11 +10,8 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 
 // Setup our routes.
-//import routes from './routes';
-//app.use('/', routes);
-
-app.get('/',(req,res) => {
-    res.status(200).json("hello");
-})
+// import routes from "./routes";
+import routes from "./routes/index.js";
+app.use("/", routes);
 mongoose. connect('mongodb://localhost:27017/stins', {useNewUrlParser: true})
     .then(() => app.listen(port, ()=> console.log(`App server listening on port ${port}!`)));
