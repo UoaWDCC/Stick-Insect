@@ -1,7 +1,8 @@
   
 import logo from './logo.svg';
 import './App.css';
-import ConsentPage from './components/ConsentPage';
+import QuestionPage from './components/QuestionPage';
+
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <ConsentPage/>
+      <QuestionPage/>
     </div>
   );
 }
