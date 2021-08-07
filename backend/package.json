@@ -13,5 +13,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.13.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1"
   }
 }
