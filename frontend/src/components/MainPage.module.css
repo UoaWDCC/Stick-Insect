@@ -26,7 +26,7 @@ including the Heading, the main text component, and the Button + 2 icons*/
     align-items: center;
 }
 .header {
-    font-size: 75px;
+    font-size: 75px;    
     font-weight: bold;
     padding-top: 50px;
 }
