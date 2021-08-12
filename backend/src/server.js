@@ -1,4 +1,5 @@
 import express from "express";
+import Mongoose from "mongoose";
 
 // Setup Express
 const app = express();
@@ -10,6 +11,12 @@ app.use(express.json());
 // Setup our routes.
 // import routes from "./routes";
 import routes from "./routes/index.js";
+import { connectDB } from "./database/database.js";
 app.use("/", routes);
 
-app.listen(port, () => console.log(`App server listening on port ${port}!`));
+// Connect Database
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`server now running on port ${port}`);
+  });
+});
