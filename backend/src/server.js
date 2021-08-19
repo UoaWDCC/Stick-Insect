@@ -1,5 +1,7 @@
 import express from "express";
-import Mongoose from "mongoose";
+import routes from "./routes/index.js";
+import { addGameResult, connectDB } from "./database/database.js";
+import { dataSet } from "./mockData/data.js";
 
 // Setup Express
 const app = express();
@@ -10,8 +12,6 @@ app.use(express.json());
 
 // Setup our routes.
 // import routes from "./routes";
-import routes from "./routes/index.js";
-import { connectDB } from "./database/database.js";
 app.use("/", routes);
 
 // Connect Database
@@ -20,3 +20,12 @@ connectDB().then(() => {
     console.log(`server now running on port ${port}`);
   });
 });
+
+// Adds game result to the database
+// Refer to the structure of game result in data.js (mock data)
+const testAddGameResult = (gameResult) => {
+  addGameResult(gameResult);
+};
+
+const oneGameResult = dataSet[0];
+testAddGameResult(oneGameResult);
