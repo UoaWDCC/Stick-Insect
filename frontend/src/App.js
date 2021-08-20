@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';//, { useState } 
 import './App.css';
-import Pagebuttonpress from './components/Pagebuttonpress';
 import MainPage from './components/MainPage';
 import ConsentPage from './components/ConsentPage';
 import QuestionPage from './components/QuestionPage';
-
 
 //Parent class for the page components
 function App() {
@@ -13,10 +11,11 @@ function App() {
   const PAGE_CONSENT = "consent";
   const PAGE_QUESTION = "question";
 
-  const [page, setPage] = React.useState("");
+  const [page, setPage] = React.useState(PAGE_MAIN);
   function pageChange(newPage) {
+    //Checks to see if the which page the page has been set to
     if(newPage === PAGE_MAIN) {
-      setPage(PAGE_MAIM);
+      setPage(PAGE_MAIN);
     } else if(newPage === PAGE_CONSENT) {
       setPage(PAGE_CONSENT);
     } else if(newPage === PAGE_QUESTION) {
@@ -24,18 +23,13 @@ function App() {
     }
   }
 
-
-
-  // We pass a callback to Child
+  // We pass a callback to the child
   return (
-    <Pagebuttonpress page = {page} onButtonClick ={pageChange}/>
-  )
+    <div>
+      {page === PAGE_MAIN && <MainPage pageChange={pageChange}/>}
+      {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange}/>}
+      {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange}/>}
+  </div>);
 }
-
-{['MainPage', 'ConsentPage', 'QuestionPage'].map((page) => (
-
-
-
-
 
 export default App;

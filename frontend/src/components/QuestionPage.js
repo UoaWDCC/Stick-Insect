@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './QuestionPage.module.css';
 
-const MainPage = (props) => (
+const QuestionPage = ({pageChange}) => (
     <section className = {styles.question_page_wrapper}>
 
         <header className = {styles.header_wrapper}>
@@ -35,4 +35,4 @@ const MainPage = (props) => (
     </section>
 );
 
-export default MainPage;
+export default QuestionPage;

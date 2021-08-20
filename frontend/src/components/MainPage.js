@@ -1,8 +1,8 @@
-//import React from 'react';
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MainPage.module.css';
 
-const MainPage = (props) => (
+//Imports the page change function from App.js
+const MainPage = ({pageChange}) => (
     <section className = {styles.main_page_wrapper}>
 
         <header className = {styles.header_wrapper}>
@@ -23,7 +23,7 @@ const MainPage = (props) => (
         <div className = {styles.bottom_wrapper}>
             <div className = {styles.bottom_body}>
                 <div className = {styles.empty}></div>
-                <button className = {styles.main_page_button}>
+                <button onClick={() => pageChange("consent")} className = {styles.main_page_button}>
                     Play Now
                 </button>
                 <div className = {styles.icon_wrapper}>

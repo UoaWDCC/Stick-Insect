@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ConsentPage.module.css';
 
-const ConsentPage = (props) => (
+const ConsentPage = ({pageChange}) => (
         <section className={styles.consent_page_wrapper}>
             <header className={styles.consent_page_header}>
                 <h1>Participant Information and Consent Form</h1>
@@ -13,8 +13,8 @@ const ConsentPage = (props) => (
                 
             </div>
             <div className={styles.consent_page_agreement_btns}>
-                <button>I AGREE</button>
-                <button>NO, TAKE ME AWAY</button>
+                <button onClick={() => pageChange("question")}>I AGREE</button>
+                <button onClick={() => pageChange("main")}>NO, TAKE ME AWAY</button>
             </div>
         </section>
     );
