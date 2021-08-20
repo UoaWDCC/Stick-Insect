@@ -16,13 +16,15 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-
-fetch("https://ba58ea56-201a-402e-b5dd-eae73f3dc45e.mock.pstmn.io/data",
-{
-    method: "PUT",
-    headers: {
-      'Content-Type': 'application/json'
-    }
+fetch("https://ba58ea56-201a-402e-b5dd-eae73f3dc45e.mock.pstmn.io/data", {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json",
+  },
 })
-.then(function(res){ return res.json(); })
-.then(function(data){ alert( JSON.stringify( data ) ) })
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    alert(JSON.stringify(data));
+  });
