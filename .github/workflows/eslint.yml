@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - STINS-018/adding-ci-cd
   pull_request:
 
 jobs:
