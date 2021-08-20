@@ -1,8 +1,7 @@
-  
-import logo from './logo.svg';
-import './App.css';
-import QuestionPage from './components/QuestionPage';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import QuestionPage from "./components/QuestionPage";
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <QuestionPage/>
+      <QuestionPage />
     </div>
   );
 }
