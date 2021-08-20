@@ -3,8 +3,7 @@ name: Prettier
 on:
   push:
     branches:
-      - master
-      - STINS-018/adding-ci-cd
+      - main
   pull_request:
 
 jobs:
