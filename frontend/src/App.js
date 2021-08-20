@@ -1,10 +1,10 @@
-import React from 'react';//, { useState } 
+import React from 'react';
 import './App.css';
+import logo from "./logo.svg";
 import MainPage from './components/MainPage';
 import ConsentPage from './components/ConsentPage';
 import QuestionPage from './components/QuestionPage';
 
-//Parent class for the page components
 function App() {
   //Declares new setPage variable, which we call "page"
   const PAGE_MAIN = "main";
@@ -22,14 +22,13 @@ function App() {
       setPage(PAGE_QUESTION);
     }
   }
-
+  
   // We pass a callback to the child
   return (
     <div>
       {page === PAGE_MAIN && <MainPage pageChange={pageChange}/>}
       {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange}/>}
       {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange}/>}
-  </div>);
+     </div>);
 }
-
 export default App;
