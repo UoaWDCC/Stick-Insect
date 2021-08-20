@@ -1,5 +1,6 @@
 import express from "express";
 
+// eslint-disable-next-line import/extensions
 import api from "./api/index.js";
 
 const router = express.Router();

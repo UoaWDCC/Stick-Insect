@@ -3,8 +3,10 @@ import Mongoose from "mongoose";
 
 // Setup our routes.
 // import routes from "./routes";
+// eslint-disable-next-line import/extensions
 import routes from "./routes/index.js";
-import { connectDB } from "./database/database.js";
+// eslint-disable-next-line import/extensions
+import connectDB from "./database/database.js";
 
 // Setup Express
 const app = express();
