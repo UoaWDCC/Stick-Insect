@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "./QuestionPage.module.css";
 
-const QuestionPage = ({pageChange}) => (
-    <section className = {styles.question_page_wrapper}>
+const QuestionPage = ({ pageChange }) => (
+  <section className={styles.question_page_wrapper}>
     <header className={styles.header_wrapper}>
       <h1 className={styles.header}>Have you played this game before?</h1>
     </header>
-
 
     <div className={styles.question_page_body_wrapper}>
       <p className={styles.question_page_body}>

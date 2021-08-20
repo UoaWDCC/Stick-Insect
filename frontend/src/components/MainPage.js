@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./MainPage.module.css";
 
-//Imports the page change function from App.js
-const MainPage = ({pageChange}) => (
-  <header className={styles.header_wrapper}>
-  <h1 className={styles.header}>
-    Spot the Stick Insect!
-  </h1>
-  </header>
+// Imports the page change function from App.js
+const MainPage = ({ pageChange }) => (
+  <section className={styles.main_page_wrapper}>
+    <header className={styles.header_wrapper}>
+      <h1 className={styles.header}>Spot the Stick Insect!</h1>
+    </header>
     <div className={styles.main_page_body_wrapper}>
       <p className={styles.main_page_body}>
         In this game, pretend you are a predator hunting for stick insects!
@@ -20,7 +19,10 @@ const MainPage = ({pageChange}) => (
     <div className={styles.bottom_wrapper}>
       <div className={styles.bottom_body}>
         <div className={styles.empty} />
-        <button onClick={() => pageChange("consent")} className = {styles.main_page_button}>
+        <button
+          onClick={() => pageChange("consent")}
+          className={styles.main_page_button}
+        >
           Play Now
         </button>
         <div className={styles.icon_wrapper}>
