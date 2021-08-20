@@ -18,8 +18,14 @@ const ConsentPage = ({ pageChange }) => (
       </p>
     </div>
     <div className={styles.consent_page_agreement_btns}>
-      <button onClick={() => pageChange("question")}>I AGREE</button>
-      <button onClick={() => pageChange("main")}>NO, TAKE ME AWAY</button>
+      <button onClick={() => pageChange("question")} type="button">
+        {" "}
+        I AGREE
+      </button>
+      <button onClick={() => pageChange("main")} type="button">
+        {" "}
+        NO, TAKE ME AWAY
+      </button>
     </div>
   </section>
 );

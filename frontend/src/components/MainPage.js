@@ -22,6 +22,7 @@ const MainPage = ({ pageChange }) => (
         <button
           onClick={() => pageChange("consent")}
           className={styles.main_page_button}
+          type="button"
         >
           Play Now
         </button>
