@@ -2,7 +2,7 @@ import Mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
-const uri = process.env["DB_HOST"];
+const uri = process.env.DB_HOST;
 
 // This function connects our server to MongDB Atlas
 export async function connectDB() {
