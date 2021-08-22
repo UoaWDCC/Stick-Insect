@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./QuestionPage.module.css";
 
-const MainPage = (props) => (
+const QuestionPage = ({ pageChange }) => (
   <section className={styles.question_page_wrapper}>
     <header className={styles.header_wrapper}>
       <h1 className={styles.header}>Have you played this game before?</h1>
@@ -32,5 +32,4 @@ const MainPage = (props) => (
     </div>
   </section>
 );
-
-export default MainPage;
+export default QuestionPage;

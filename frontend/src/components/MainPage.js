@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./MainPage.module.css";
 
-const MainPage = (props) => (
+// Imports the page change function from App.js
+const MainPage = ({ pageChange }) => (
   <section className={styles.main_page_wrapper}>
     <header className={styles.header_wrapper}>
       <h1 className={styles.header}>Spot the Stick Insect!</h1>
     </header>
-
     <div className={styles.main_page_body_wrapper}>
       <p className={styles.main_page_body}>
         In this game, pretend you are a predator hunting for stick insects!
@@ -19,7 +19,11 @@ const MainPage = (props) => (
     <div className={styles.bottom_wrapper}>
       <div className={styles.bottom_body}>
         <div className={styles.empty} />
-        <button className={styles.main_page_button} type="button">
+        <button
+          onClick={() => pageChange("consent")}
+          className={styles.main_page_button}
+          type="button"
+        >
           Play Now
         </button>
         <div className={styles.icon_wrapper}>
@@ -30,5 +34,4 @@ const MainPage = (props) => (
     </div>
   </section>
 );
-
 export default MainPage;
