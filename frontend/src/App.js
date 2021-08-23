@@ -1,7 +1,7 @@
-  
-import logo from './logo.svg';
-import './App.css';
-import ConsentPage from './components/ConsentPage';
+import logo from "./logo.svg";
+import "./App.css";
+import ConsentPage from "./components/ConsentPage";
+import Timer from "./components/Timer";
 
 function App() {
   return (
@@ -20,7 +20,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <ConsentPage/>
+      <Timer />
+      <ConsentPage />
     </div>
   );
 }
