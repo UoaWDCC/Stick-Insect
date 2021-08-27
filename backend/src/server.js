@@ -3,6 +3,13 @@ import routes from "./routes/index.js";
 import { addGameResult, connectDB } from "./database/database.js";
 import { dataSet } from "./mockData/data.js";
 
+// Setup our routes.
+// import routes from "./routes";
+// eslint-disable-next-line import/extensions
+import routes from "./routes/index.js";
+// eslint-disable-next-line import/extensions
+import connectDB from "./database/database.js";
+
 // Setup Express
 const app = express();
 const port = process.env.PORT || 3001;
@@ -10,8 +17,10 @@ const port = process.env.PORT || 3001;
 // Setup body-parser
 app.use(express.json());
 
+
 // Setup our routes.
 // import routes from "./routes";
+
 app.use("/", routes);
 
 // Connect Database

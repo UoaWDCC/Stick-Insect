@@ -1,28 +1,35 @@
-  
-import logo from './logo.svg';
-import './App.css';
-import ConsentPage from './components/ConsentPage';
+import React from "react";
+import "./App.css";
+import logo from "./logo.svg";
+import MainPage from "./components/MainPage";
+import ConsentPage from "./components/ConsentPage";
+import QuestionPage from "./components/QuestionPage";
 
 function App() {
+  // Declares new setPage variable, which we call "page"
+  const PAGE_MAIN = "main";
+  const PAGE_CONSENT = "consent";
+  const PAGE_QUESTION = "question";
+
+  const [page, setPage] = React.useState(PAGE_MAIN);
+  function pageChange(newPage) {
+    // Checks to see if the which page the page has been set to
+    if (newPage === PAGE_MAIN) {
+      setPage(PAGE_MAIN);
+    } else if (newPage === PAGE_CONSENT) {
+      setPage(PAGE_CONSENT);
+    } else if (newPage === PAGE_QUESTION) {
+      setPage(PAGE_QUESTION);
+    }
+  }
+
+  // We pass a callback to the child
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <ConsentPage/>
+    <div>
+      {page === PAGE_MAIN && <MainPage pageChange={pageChange} />}
+      {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange} />}
+      {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange} />}
     </div>
   );
 }
-
 export default App;

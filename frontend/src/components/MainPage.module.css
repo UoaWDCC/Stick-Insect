@@ -4,79 +4,80 @@ including the Heading, the main text component, and the Button + 2 icons*/
 
 /*Overal style attributes that can be applied to the entire page*/
 .main_page_wrapper {
-    box-sizing: border-box;
-    background-color: #9AB99D;
-    border: 30px solid #9AB99D;
-    height: 100vh;
-    font-size: 30px;
-    text-align: center;
-    color: black;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  box-sizing: border-box;
+  background-color: #9ab99d;
+  border: 30px solid #9ab99d;
+  height: 100vh;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Header specific styles*/
 .header_wrapper {
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header {
-    font-size: 75px;
-    font-weight: bold;
-    padding-top: 50px;
+  font-size: 75px;
+  font-weight: bold;
+  padding-top: 50px;
 }
 /*Main text body styles*/
 .main_page_body_wrapper {
-    flex:0;
+  flex: 0;
 }
 .main_page_body {
-    background-color: #C9DBCC;
-    font-weight: 500;
-    line-height: 1.5;
-    height: auto;
-    width: 900px;  
-    margin-top: 50px;
-    padding: 10px;
+  background-color: #c9dbcc;
+  font-weight: 500;
+  line-height: 1.5;
+  height: auto;
+  width: 900px;
+  margin-top: 50px;
+  padding: 10px;
 }
 /*Start of the Button and Icon area*/
 .bottom_wrapper {
-    flex: 1;
+  flex: 1;
 }
 .bottom_body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
 }
-.empty{/*Empty area on the left side of the Play now button*/
-    width: 200px;
+.empty {
+  /*Empty area on the left side of the Play now button*/
+  width: 200px;
 }
 /*Main button*/
 .main_page_button {
-    outline-width: 0px;
-    background-color: #cf8847;
-    font-size: 50px;
-    font-weight: bold;
-    padding-left: 50px;
-    padding-right: 50px;
+  outline-width: 0px;
+  background-color: #cf8847;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 /*Icons*/
 .icon_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .main_page_icons {
-    flex: 1;
-    background-color: grey;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 200px;
+  flex: 1;
+  background-color: grey;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
 }
