@@ -1,8 +1,9 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import logo from "./logo.svg";
+import MainPage from "./components/MainPage";
 import ConsentPage from "./components/ConsentPage";
-import Timer from "./components/Timer";
-import { useState, useEffect } from "react";
+import QuestionPage from "./components/QuestionPage";
 
 function App() {
   //const [record, setRecord] = useState([]);
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Timer sec={sec} background={background} />
-      <ConsentPage />
+      {/* <ConsentPage /> */}
     </div>
   );
 }
