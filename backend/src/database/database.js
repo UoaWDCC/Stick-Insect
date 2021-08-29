@@ -22,7 +22,7 @@ const gameSchema = new Mongoose.Schema({
 const Game = Mongoose.model("Game", gameSchema);
 
 // This function connects our server to MongDB Atlas
-async function connectDB() {
+export async function connectDB() {
   Mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -40,5 +40,5 @@ async function connectDB() {
 export async function addGameResult(gameResult) {
   return new Game(gameResult)
     .save()
-    .then((data) => console.log("Game successfully added: " + data));
+    .then((data) => console.log(`Game successfully added: ${data}`));
 }

@@ -1,4 +1,4 @@
-export const dataSet = [
+const dataSet = [
   {
     isFirstAttempt: "true",
     rounds: [
@@ -33,3 +33,5 @@ export const dataSet = [
     ],
   },
 ];
+
+export default dataSet;

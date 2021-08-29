@@ -1,14 +1,12 @@
 import express from "express";
-import routes from "./routes/index.js";
-import { addGameResult, connectDB } from "./database/database.js";
-import { dataSet } from "./mockData/data.js";
+import routes from "./routes/index";
+import { addGameResult, connectDB } from "./database/database";
+import dataSet from "./mockData/data";
 
 // Setup our routes.
 // import routes from "./routes";
 // eslint-disable-next-line import/extensions
-import routes from "./routes/index.js";
 // eslint-disable-next-line import/extensions
-import connectDB from "./database/database.js";
 
 // Setup Express
 const app = express();
@@ -16,7 +14,6 @@ const port = process.env.PORT || 3001;
 
 // Setup body-parser
 app.use(express.json());
-
 
 // Setup our routes.
 // import routes from "./routes";
