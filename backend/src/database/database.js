@@ -4,8 +4,25 @@ import dotenv from "dotenv";
 dotenv.config();
 const uri = process.env.DB_HOST;
 
+// Create schema for game result
+const gameSchema = new Mongoose.Schema({
+  isFirstAttempt: String,
+  rounds: [
+    {
+      roundNum: String,
+      insectType: String,
+      backgroundType: String,
+      time: String,
+      isCorrect: String,
+    },
+  ],
+});
+
+// create model for game result
+const Game = Mongoose.model("Game", gameSchema);
+
 // This function connects our server to MongDB Atlas
-async function connectDB() {
+export async function connectDB() {
   Mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -19,4 +36,9 @@ async function connectDB() {
   });
 }
 
-export default connectDB;
+// This function adds game to MongoDB Atlas database
+export async function addGameResult(gameResult) {
+  return new Game(gameResult)
+    .save()
+    .then((data) => console.log(`Game successfully added: ${data}`));
+}
