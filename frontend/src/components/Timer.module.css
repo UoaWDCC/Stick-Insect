@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.timer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  line-height: 100px;
+}
+
+.red {
+  background-color: rgb(226, 230, 8);
+}
