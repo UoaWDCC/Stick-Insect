@@ -1,7 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
 import styles from "./Timer.module.css";
 
+// eslint-disable-next-line func-names
 const Timer = function () {
   const [sec, setSec] = useState(10);
   const [background, setbackground] = useState("blue");
@@ -16,7 +17,7 @@ const Timer = function () {
 
     if (sec === 0) {
       clearTimeout(timer);
-      //setSec("You finish!!");
+      // setSec("You finish!!");
     }
   });
 

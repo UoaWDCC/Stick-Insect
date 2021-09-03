@@ -1,14 +1,7 @@
-import React from "react";
 import "./App.css";
-
-// import logo from "./logo.svg";
-// import MainPage from "./components/MainPage";
-// import ConsentPage from "./components/ConsentPage";
-// import QuestionPage from "./components/QuestionPage";
+import React from "react";
 import Timer from "./components/Timer";
-import { useState, useEffect } from "react";
 
-import logo from "./logo.svg";
 import MainPage from "./components/MainPage";
 import ConsentPage from "./components/ConsentPage";
 import QuestionPage from "./components/QuestionPage";
@@ -33,20 +26,14 @@ function App() {
 
   // We pass a callback to the child
   return (
-
     <div className="App">
       <Timer />
       {/* <ConsentPage /> */}
-    </div>
-  );
-}
-
-
-    <div>
       {page === PAGE_MAIN && <MainPage pageChange={pageChange} />}
       {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange} />}
       {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange} />}
     </div>
   );
+}
 
 export default App;
