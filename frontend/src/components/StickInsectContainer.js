@@ -21,12 +21,12 @@ const StyledInsectContainer = styled.div`
     }
 `;
 
-export function StickInsectContainer(props) {
+export function StickInsectContainer() {
   const [randLeftPos, setLeftPos] = useState("");
   const [randTopPos, setTopPos] = useState("");
 
   const updateInsect = () => {
-    alert("Found me!");
+    console.log("Found me!");
     setLeftPos(Math.floor(Math.random() * 80) + 10);
     setTopPos(Math.floor(Math.random() * 80) + 10);
   };
