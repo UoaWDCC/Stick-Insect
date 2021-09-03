@@ -14,12 +14,12 @@ const StyledStickInsect = styled.div`
 `;
 
 const StyledInsectContainer = styled.div`
-        & {
-            position: relative;
-            width: 100%
-            height: 100%
-        }
-    `;
+  & {
+      position: relative;
+      width: 100%
+      height: 100%
+    }
+`;
 
 export function StickInsectContainer(props) {
   const [randLeftPos, setLeftPos] = useState("");
