@@ -1,10 +1,10 @@
-import "./App.css";
 import React from "react";
-import Timer from "./components/Timer";
+import styles from "./app.module.css";
+import Timer from "./components/timer/Timer";
 
-import MainPage from "./components/MainPage";
-import ConsentPage from "./components/ConsentPage";
-import QuestionPage from "./components/QuestionPage";
+import MainPage from "./components/landingPage/landingPage";
+import ConsentPage from "./components/consentPage/consentPage";
+import QuestionPage from "./components/instructionPage/instructionPage";
 
 function App() {
   // Declares new setPage variable, which we call "page"
@@ -27,11 +27,11 @@ function App() {
   // We pass a callback to the child
   return (
     <div className="App">
-      <Timer />
+      {/* <Timer /> */}
       {/* <ConsentPage /> */}
-      {page === PAGE_MAIN && <MainPage pageChange={pageChange} />}
-      {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange} />}
-      {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange} />}
+      {/* {page === PAGE_MAIN && <MainPage pageChange={pageChange} />} */}
+      {/* {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange} />} */}
+      {/* {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange} />} */}
     </div>
   );
 }
