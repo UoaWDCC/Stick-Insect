@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./MainPage.module.css";
+import styles from "./landingPage.module.css";
 
 // Imports the page change function from App.js
-const MainPage = ({ pageChange }) => (
+const LandingPage = ({ pageChange }) => (
   <section className={styles.main_page_wrapper}>
     <header className={styles.header_wrapper}>
       <h1 className={styles.header}>Spot the Stick Insect!</h1>
@@ -34,4 +34,4 @@ const MainPage = ({ pageChange }) => (
     </div>
   </section>
 );
-export default MainPage;
+export default LandingPage;
