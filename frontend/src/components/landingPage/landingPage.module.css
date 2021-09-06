@@ -1,83 +1,73 @@
-/*Basic setup for the Homepage*/
-/*Split the homepage into three sections, 
-including the Heading, the main text component, and the Button + 2 icons*/
-
-/*Overal style attributes that can be applied to the entire page*/
-.main_page_wrapper {
-  box-sizing: border-box;
+.whole_wrapper {
+  width: 100%;
+  height: 100%;
   background-color: #9ab99d;
-  border: 30px solid #9ab99d;
-  height: 100vh;
-  font-size: 30px;
-  text-align: center;
-  color: black;
-
   display: flex;
   flex-direction: column;
+}
+
+.header_wrapper {
+  height: 200px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*Header specific styles*/
-.header_wrapper {
-  height: 80px;
+.title {
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.body_wrapper {
+  height: 300px;
+  padding: 30px;
+}
+
+.body_content {
+  background-color: #c9dbcc;
+  padding: 30px;
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.bottom_wrapper {
+  position: relative;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header {
-  font-size: 75px;
-  font-weight: bold;
-  padding-top: 50px;
-}
-/*Main text body styles*/
-.main_page_body_wrapper {
-  flex: 0;
-}
-.main_page_body {
-  background-color: #c9dbcc;
-  font-weight: 500;
-  line-height: 1.5;
-  height: auto;
-  width: 900px;
-  margin-top: 50px;
-  padding: 10px;
-}
-/*Start of the Button and Icon area*/
-.bottom_wrapper {
-  flex: 1;
-}
-.bottom_body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 900px;
-}
-.empty {
-  /*Empty area on the left side of the Play now button*/
-  width: 200px;
-}
-/*Main button*/
-.main_page_button {
-  outline-width: 0px;
+
+.play_btn {
+  border: none;
   background-color: #cf8847;
   font-size: 50px;
   font-weight: bold;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 350px;
+  height: 70px;
+  transition: all 0.3s;
+  border-radius: 15px;
 }
-/*Icons*/
-.icon_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+.play_btn:hover {
+  background-color: #bc6a21;
 }
-.main_page_icons {
-  flex: 1;
-  background-color: grey;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 200px;
+
+.play_btn:focus {
+  outline: none;
+}
+
+.logo_wrapper {
+  position: absolute;
+  right: 30px;
+}
+
+.logo {
+  width: 80px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
 }

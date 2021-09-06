@@ -27,8 +27,10 @@ function App() {
 
   // We pass a callback to the child
   return (
-    <div className="App">
-      <LandingPage />
+    <div className={styles.app}>
+      <article className={styles.pageFrame}>
+        <LandingPage />
+      </article>
       {/* <Timer /> */}
       {/* <ConsentPage /> */}
       {/* {page === PAGE_MAIN && <MainPage pageChange={pageChange} />} */}
