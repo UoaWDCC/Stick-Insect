@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./components/consentPage/consentPage";
+import InstructionPage from "./components/instructionPage/instructionPage";
 import LandingPage from "./components/landingPage/landingPage";
 // import Timer from "./components/timer/Timer";
 
@@ -31,7 +32,8 @@ function App() {
     <div className={styles.app}>
       <article className={styles.pageFrame}>
         {/* <LandingPage /> */}
-        <ConsentPage />
+        {/* <ConsentPage /> */}
+        <InstructionPage />
       </article>
       {/* <Timer /> */}
       {/* <ConsentPage /> */}
