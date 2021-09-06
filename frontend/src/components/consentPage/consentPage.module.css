@@ -1,48 +1,54 @@
-.consent_page_wrapper {
+.whole_wrapper {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 40px solid #9ab99d;
+  border: 50px solid #9ab99d;
+  background-color: white;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.consent_page_header {
-  height: 60px;
+.header {
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.consent_page_header h1 {
-  font-size: 28px;
+.header h1 {
+  font-size: 40px;
   font-weight: 500;
 }
 
-.consent_page_agreement {
+.agreement_content {
   flex: 1;
+  padding: 20px 40px;
 }
 
-.consent_page_agreement p {
-  padding: 15px;
+.agreement_content p {
+  font-size: 20px;
 }
 
-.consent_page_agreement_btns {
-  height: 80px;
+.btns {
   display: flex;
   justify-content: center;
 }
 
-.consent_page_agreement_btns button {
-  font-size: 22px;
+.btns button {
+  font-size: 25px;
   font-weight: bold;
   background-color: #386f3e;
   color: white;
   outline: none;
   border: none;
   margin: 15px;
-  padding: 0 40px;
+  padding: 15px 60px;
+  border-radius: 15px;
+}
+
+.btns button:hover {
+  background-color: #57965d;
 }
 
 @media only screen and (max-width: 610px) {
