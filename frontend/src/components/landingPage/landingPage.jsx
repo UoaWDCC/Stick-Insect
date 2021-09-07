@@ -3,7 +3,7 @@ import styles from "./landingPage.module.css";
 import uoaLogo from "../../assets/images/uoa-logo.png";
 import wdccLogo from "../../assets/images/wdcc-logo.png";
 
-const LandingPage = ({ pageChange }) => (
+const LandingPage = ({ switchToConsentPage }) => (
   <section className={styles.whole_wrapper}>
     <header className={styles.header_wrapper}>
       <h1 className={styles.title}>Spot the Stick Insect!</h1>
@@ -19,7 +19,7 @@ const LandingPage = ({ pageChange }) => (
 
     <div className={styles.bottom_wrapper}>
       <button
-        onClick={() => pageChange("consent")}
+        onClick={switchToConsentPage}
         className={styles.play_btn}
         type="button"
       >
