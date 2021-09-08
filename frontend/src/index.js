@@ -3,6 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
 
+/**
+ * This is the starting point of our react app. As you can see, <App /> component (app.jsx) is rendered here.
+ */
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -11,7 +15,7 @@ ReactDOM.render(
 );
 
 /**
- * Below is the code written by Aiden
+ * Below is the code written by Aiden (I guess). Please uncomment it when you need it!
  */
 // fetch("https://ba58ea56-201a-402e-b5dd-eae73f3dc45e.mock.pstmn.io/data", {
 //   method: "PUT",

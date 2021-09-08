@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "./instructionPage.module.css";
 
-const InstructionPage = ({ pageChange }) => (
+/**
+ * This component is the Instruction Page for our app.
+ *
+ * receiving props:
+ *   - TBD
+ */
+
+const InstructionPage = (props) => (
   <section className={styles.whole_wrapper}>
     <header className={styles.header}>
       <h1 className={styles.title}>Have you played this game before?</h1>

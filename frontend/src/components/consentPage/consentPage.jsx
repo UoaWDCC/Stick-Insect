@@ -1,6 +1,14 @@
 import React from "react";
 import styles from "./consentPage.module.css";
 
+/**
+ * This component is the Consent Page for our app
+ *
+ * receiving props:
+ *   - switchToLandingPage (function): This function is defined in the App component. The "No, Take Me Away" button will trigger this function.
+ *   - switchToInstructionPage (function): This function is defined in the App component. The "I Agree" button will trigger this function.
+ */
+
 const ConsentPage = ({ switchToLandingPage, switchToInstructionPage }) => (
   <section className={styles.whole_wrapper}>
     <header className={styles.header}>

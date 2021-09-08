@@ -3,6 +3,13 @@ import styles from "./landingPage.module.css";
 import uoaLogo from "../../assets/images/uoa-logo.png";
 import wdccLogo from "../../assets/images/wdcc-logo.png";
 
+/**
+ * This component is the Landing Page for our app
+ *
+ * receiving props:
+ *   - switchToConsentPage (function): This function is defined in the App component. The "Play now" button will trigger this function.
+ */
+
 const LandingPage = ({ switchToConsentPage }) => (
   <section className={styles.whole_wrapper}>
     <header className={styles.header_wrapper}>

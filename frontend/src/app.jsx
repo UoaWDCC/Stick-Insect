@@ -4,11 +4,25 @@ import ConsentPage from "./components/consentPage/consentPage";
 import InstructionPage from "./components/instructionPage/instructionPage";
 import LandingPage from "./components/landingPage/landingPage";
 
+/**
+ * This component is the parent of all components we have in our app.
+ *
+ * Contains info about:
+ *  current page (state)
+ *  possible pages (enums)
+ *  page switching function (function)
+ *
+ * The role of this component:
+ *  display the correct page according to its "currentPage" state
+ */
+
 function App() {
-  // Pages
+  // Below are enums for each of the pages
   const PAGE_LANDING = "landing";
   const PAGE_CONSENT = "consent";
   const PAGE_INSTRUCTION = "instruction";
+  const PAGE_GAME = "game";
+  const PAGE_RESULTS = "results";
 
   const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
 
@@ -40,11 +54,6 @@ function App() {
   return (
     <div className={styles.app}>
       <article className={styles.pageFrame}>{displayPage()}</article>
-      {/* <Timer /> */}
-      {/* <ConsentPage /> */}
-      {/* {page === PAGE_MAIN && <MainPage pageChange={pageChange} />} */}
-      {/* {page === PAGE_CONSENT && <ConsentPage pageChange={pageChange} />} */}
-      {/* {page === PAGE_QUESTION && <QuestionPage pageChange={pageChange} />} */}
     </div>
   );
 }
