@@ -1,37 +1,73 @@
-const dataSet = [
-  {
-    isFirstAttempt: "true",
-    rounds: [
-      {
-        roundNum: "1",
-        insectType: "it1",
-        backgroundType: "bt1",
-        time: "5",
-        isCorrect: "true",
-      },
-      {
-        roundNum: "2",
-        insectType: "it1",
-        backgroundType: "bt1",
-        time: "10",
-        isCorrect: "true",
-      },
-      {
-        roundNum: "3",
-        insectType: "it2",
-        backgroundType: "bt2",
-        time: "7",
-        isCorrect: "true",
-      },
-      {
-        roundNum: "4",
-        insectType: "it2",
-        backgroundType: "bt2",
-        time: "2",
-        isCorrect: "true",
-      },
-    ],
-  },
-];
+const dataset = [game1, game2, game3];
 
-export default dataSet;
+/**
+ * Below is the mock data for games
+ */
+const game1 = {
+  rounds: [
+    {
+      roundNum: 1,
+      backgroundId: "bg1",
+      timeTaken: 10,
+      isFound: true,
+    },
+    {
+      roundNum: 2,
+      backgroundId: "bg2",
+      timeTaken: 15,
+      isFound: true,
+    },
+    {
+      roundNum: 3,
+      backgroundId: "bg3",
+      timeTaken: 15,
+      isFound: false,
+    },
+  ],
+};
+
+const game2 = {
+  rounds: [
+    {
+      roundNum: 1,
+      backgroundId: "bg3",
+      timeTaken: 3,
+      isFound: true,
+    },
+    {
+      roundNum: 2,
+      backgroundId: "bg2",
+      timeTaken: 6,
+      isFound: true,
+    },
+    {
+      roundNum: 3,
+      backgroundId: "bg1",
+      timeTaken: 6,
+      isFound: true,
+    },
+  ],
+};
+
+const game3 = {
+  rounds: [
+    {
+      roundNum: 1,
+      backgroundId: "bg2",
+      timeTaken: 13,
+      isFound: true,
+    },
+    {
+      roundNum: 2,
+      backgroundId: "bg2",
+      timeTaken: 15,
+      isFound: true,
+    },
+    {
+      roundNum: 3,
+      backgroundId: "bg1",
+      timeTaken: 15,
+      isFound: false,
+    },
+  ],
+};
