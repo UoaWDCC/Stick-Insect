@@ -1,5 +1,3 @@
-const dataset = [game1, game2, game3];
-
 /**
  * Below is the mock data for games
  */
@@ -71,3 +69,5 @@ const game3 = {
     },
   ],
 };
+
+const dataset = [game1, game2, game3];

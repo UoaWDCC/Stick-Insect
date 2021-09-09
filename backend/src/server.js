@@ -1,8 +1,8 @@
 import express from "express";
-import gameRouter from "./routes/gameRouter.js";
-import emailRouter from "./routes/emailRouter.js";
 import dotenv from "dotenv"; // this is the library which enables us to use .env file to store secure info
-import { connectDB } from "./database/database.js";
+import gameRouter from "./routes/gameRouter";
+import emailRouter from "./routes/emailRouter";
+import connectDB from "./database/database";
 
 dotenv.config(); // enable the dotenv library
 const PORT = process.env.PORT || 3001;
