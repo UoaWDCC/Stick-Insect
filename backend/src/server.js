@@ -1,37 +1,33 @@
 import express from "express";
-import routes from "./routes/index";
-import { addGameResult, connectDB } from "./database/database";
-import dataSet from "./mockData/data";
+import dotenv from "dotenv"; // this is the library which enables us to use .env file to store secure info
+/* eslint-disable */
+import gameRouter from "./routes/gameRouter.js";
+import emailRouter from "./routes/emailRouter.js";
+import connectDB from "./database/database.js";
+/* eslint-enable */
 
-// Setup our routes.
-// import routes from "./routes";
-// eslint-disable-next-line import/extensions
-// eslint-disable-next-line import/extensions
+dotenv.config(); // enable the dotenv library
+const PORT = process.env.PORT || 3001;
 
-// Setup Express
 const app = express();
-const port = process.env.PORT || 3001;
+app.use(express.json()); // For all incoming request body express will recognize it as JSON format
 
-// Setup body-parser
-app.use(express.json());
+app.use("/email", emailRouter); // for all request url starting with :/email, emailRouter will handle it
+app.use("/game", gameRouter); // for all request url starting with :/game, gameRouter will handle it
 
-// Setup our routes.
-// import routes from "./routes";
-
-app.use("/", routes);
-
-// Connect Database
-connectDB().then(() => {
-  app.listen(port, () => {
-    console.log(`server now running on port ${port}`);
-  });
+app.get("/", (req, res) => {
+  console.log("Received");
+  res.status(200).send("Welcome to STINS server");
 });
 
-// Adds game result to the database
-// Refer to the structure of game result in data.js (mock data)
-const testAddGameResult = (gameResult) => {
-  addGameResult(gameResult);
-};
+// Error handling middleware
+app.use((error, req, res, next) => {
+  console.error();
+  res.status(500).send("Unexpected server error occured.");
+});
 
-const oneGameResult = dataSet[0];
-testAddGameResult(oneGameResult);
+// Establish connection between server and database.
+// When connection is successful, then server listen to PORT.
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`Server now running on port: ${PORT}`));
+});

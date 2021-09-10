@@ -1,44 +1,29 @@
-import Mongoose from "mongoose";
+import Mongoose from "mongoose"; // import Mongoose API
 import dotenv from "dotenv";
+
+/**
+ * This file should contain the functions/codes that is related to database queries/configuration.
+ * Examples can be functions which do "Send user email to DB" and "Send game data to DB".
+ *
+ * Other modules (files) will import from this module to do database related jobs.
+ * For example, server.js imports connectDB() from this module to make connection to the database.
+ */
 
 dotenv.config();
 const uri = process.env.DB_HOST;
 
-// Create schema for game result
-const gameSchema = new Mongoose.Schema({
-  isFirstAttempt: String,
-  rounds: [
-    {
-      roundNum: String,
-      insectType: String,
-      backgroundType: String,
-      time: String,
-      isCorrect: String,
-    },
-  ],
-});
-
-// create model for game result
-const Game = Mongoose.model("Game", gameSchema);
-
-// This function connects our server to MongDB Atlas
-export async function connectDB() {
+// This function requests connection establishment to database
+async function connectDB() {
   Mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-
   const db = Mongoose.connection;
-
-  db.on("error", () => console.error("Error occured"));
+  db.on("error", () => console.error("Error occured")); // If failed to connect
   db.once("open", () => {
+    // If successful to connect
     console.log("DB Successfully Connected!");
   });
 }
 
-// This function adds game to MongoDB Atlas database
-export async function addGameResult(gameResult) {
-  return new Game(gameResult)
-    .save()
-    .then((data) => console.log(`Game successfully added: ${data}`));
-}
+export default connectDB;
