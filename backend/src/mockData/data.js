@@ -137,6 +137,8 @@ const MockData = () => {
   const email4 = {
     email: "user123@example.com",
   }
+
+  return [game1, game2, game3, game4, game5, email1, email2, email3, email4];
 }
 
 export default MockData;
