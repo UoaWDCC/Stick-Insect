@@ -125,11 +125,11 @@ const MockData = () => {
   const email1 = {
     email: "test@test.com",
   };
-  
+
   const email2 = {
     email: "emailt@test.com",
   };
-  
+
   const email3 = {
     email: "email2@test.com",
   };
