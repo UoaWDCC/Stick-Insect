@@ -17,12 +17,9 @@
   outline: none;
 }
 
-.btns {
-  display: flex;
-  justify-content: center;
-}
+/* Consent Buttons */
 
-.btns button {
+.consent_btn {
   font-size: 25px;
   font-weight: bold;
   background-color: #386f3e;
@@ -34,6 +31,20 @@
   border-radius: 15px;
 }
 
-.btns button:hover {
+.consent_btn:hover {
   background-color: #57965d;
+}
+
+@media only screen and (max-width: 610px) {
+  .consent_page_agreement_btns button {
+    font-size: 18px;
+    padding: 0 20px;
+    margin: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .consent_page_agreement_btns button {
+    font-size: 15px;
+  }
 }

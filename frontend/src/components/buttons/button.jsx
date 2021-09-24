@@ -11,7 +11,7 @@ function PlayButton({ func, text }) {
 
 function ConsentButton({ func, text }) {
   return (
-    <button onClick={func} type="button">
+    <button onClick={func} className={styles.consent_btn} type="button">
       {" "}
       {text}
     </button>

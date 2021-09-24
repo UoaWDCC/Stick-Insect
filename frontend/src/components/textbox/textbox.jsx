@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./textbox.module.css";
 
-function TextWrapper({ text }) {
+function LandingTextbox({ text }) {
   return (
     <div>
       <p className={styles.landing_body_content}>{text}</p>
@@ -9,4 +9,12 @@ function TextWrapper({ text }) {
   );
 }
 
-export default TextWrapper;
+function ConsentTextbox({ text }) {
+  return (
+    <div>
+      <p className={styles.agreement_content}>{text}</p>
+    </div>
+  );
+}
+
+export { LandingTextbox, ConsentTextbox };

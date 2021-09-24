@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./landingPage.module.css";
 import Buttons, { PlayButton } from "../../components/buttons/button";
 import Logos from "../../components/logo/logo";
-import Textbox from "../../components/textbox/textbox";
+import Textbox, { LandingTextbox } from "../../components/textbox/textbox";
 
 /**
  * This component is the Landing Page for our app
@@ -17,7 +17,7 @@ const LandingPage = ({ switchToConsentPage }) => (
       <h1 className={styles.title}>Spot the Stick Insect!</h1>
     </header>
     <div className={styles.body_wrapper}>
-      <Textbox
+      <LandingTextbox
         text="In this game, pretend you are a predator hunting for stick insects!
         Stick insects are masters of camouflage, who use their appearance to
         avoid being caught. You need to find them as quickly as possible by
