@@ -1,3 +1,0 @@
-/**
- * Implement ResultsPage component here
- */
