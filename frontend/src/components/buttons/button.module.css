@@ -1,0 +1,39 @@
+/* styles for 'play now' button on landing page */
+
+.play_btn {
+  border: none;
+  background-color: #cf8847;
+  font-size: 50px;
+  font-weight: bold;
+  width: 350px;
+  height: 70px;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+.play_btn:hover {
+  background-color: #bc6a21;
+}
+.play_btn:focus {
+  outline: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btns button {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #386f3e;
+  color: white;
+  outline: none;
+  border: none;
+  margin: 15px;
+  padding: 15px 60px;
+  border-radius: 15px;
+}
+
+.btns button:hover {
+  background-color: #57965d;
+}
