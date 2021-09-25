@@ -1,7 +1,7 @@
 import express from "express";
+import Email from "../models/email";
 
 const router = express.Router();
-const Email = require("../models/email");
 
 router.get("/", (req, res) => {
   Email.find()
@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
-      console.log(err);
+      console.error(err);
     });
 });
 
@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
-      console.log(err);
+      console.error(err);
     });
 });
 

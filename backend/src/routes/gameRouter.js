@@ -1,6 +1,5 @@
 import express from "express";
-
-const Game = require("../models/game");
+import Game from "../models/game";
 
 const router = express.Router();
 
@@ -11,7 +10,7 @@ router.get("/", (req, res) => {
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
-      console.log(err);
+      console.error(err);
     });
 });
 
@@ -46,7 +45,7 @@ router.post("/", (req, res) => {
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
-      console.log(err);
+      console.error(err);
     });
 });
 
