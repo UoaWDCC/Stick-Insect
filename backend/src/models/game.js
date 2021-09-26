@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+// eslint-disable-next-line import/extensions
+import roundSchema from "./round.js";
 
 const { Schema } = mongoose;
-const Round = require("./round");
 
 const gameSchema = new Schema({
-  rounds: [Round],
+  rounds: [roundSchema],
   isFirstAttempt: {
     type: Boolean,
     required: true,
@@ -12,4 +13,4 @@ const gameSchema = new Schema({
 });
 
 const Game = mongoose.model("Game", gameSchema);
-module.exports = Game;
+export default Game;

@@ -1,5 +1,6 @@
 import express from "express";
-import Game from "../models/game";
+// eslint-disable-next-line import/extensions
+import Game from "../models/game.js";
 
 const router = express.Router();
 

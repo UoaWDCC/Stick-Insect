@@ -1,5 +1,6 @@
 import express from "express";
-import Email from "../models/email";
+// eslint-disable-next-line import/extensions
+import Email from "../models/email.js";
 
 const router = express.Router();
 
