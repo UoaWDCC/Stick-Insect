@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./components/consentPage/consentPage";
 import InstructionPage from "./components/instructionPage/instructionPage";
 import LandingPage from "./components/landingPage/landingPage";
+import Timer from "./components/timer/timer";
 
 /**
  * This component is the parent of all components we have in our app.
@@ -54,6 +55,7 @@ function App() {
   return (
     <div className={styles.app}>
       <article className={styles.pageFrame}>{displayPage()}</article>
+      <Timer />
     </div>
   );
 }
