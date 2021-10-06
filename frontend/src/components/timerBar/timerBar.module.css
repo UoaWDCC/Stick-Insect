@@ -6,10 +6,10 @@
   margin: 50;
 }
 .overlayprogressbar {
-    width: 100%;
-    background-color: yellowgreen;
-    border-radius: inherit;
-  }
+  width: 100%;
+  background-color: yellowgreen;
+  border-radius: inherit;
+}
 
 .textStyles {
   padding: 5;
