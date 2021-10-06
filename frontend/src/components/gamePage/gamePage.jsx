@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./gamePage.module.css";
+import Timer from "../timer/timer";
 import TimerBar from "../timerBar/timerBar";
 
 // eslint-disable-next-line

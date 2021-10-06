@@ -4,7 +4,7 @@ import styles from "./timer.module.css";
 
 // eslint-disable-next-line func-names
 const Timer = function () {
-  const [sec, setSec] = useState(10);
+  const [sec, setSec] = useState(15);
   const [background, setbackground] = useState("blue");
 
   useEffect(() => {
