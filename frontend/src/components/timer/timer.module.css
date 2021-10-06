@@ -5,11 +5,13 @@
 
 .timer {
   height: 100px;
+  width: 100px;
   display: flex;
   justify-content: center;
   line-height: 100px;
-}
-
-.red {
-  background-color: rgb(226, 230, 8);
+  border-radius: 50%;
+  font-weight: 700;
+  color: white;
+  font-size: 50px;
+  background-color: rgb(15, 15, 15);
 }
