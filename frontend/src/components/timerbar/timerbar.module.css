@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.timerbar {
+  background-color: #9ab99d;
+  width: 50px;
+  height: 129px;
+}
+
+.timerbarinside {
+  background-color: rgb(143, 142, 142);
+  width: 50px;
+}

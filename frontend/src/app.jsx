@@ -3,8 +3,7 @@ import styles from "./app.module.css";
 import ConsentPage from "./components/consentPage/consentPage";
 import InstructionPage from "./components/instructionPage/instructionPage";
 import LandingPage from "./components/landingPage/landingPage";
-import Timer from "./components/timer/timer";
-
+import GamePage from "./components/gamePage/gamePage";
 /**
  * This component is the parent of all components we have in our app.
  *
@@ -48,6 +47,9 @@ function App() {
         return <InstructionPage />;
       default:
         return null;
+
+      // case PAGE_GAME:
+      //   return <GamePage />;
     }
   };
 
@@ -55,7 +57,6 @@ function App() {
   return (
     <div className={styles.app}>
       <article className={styles.pageFrame}>{displayPage()}</article>
-      <Timer />
     </div>
   );
 }

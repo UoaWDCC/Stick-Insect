@@ -4,7 +4,7 @@ import styles from "./timer.module.css";
 
 // eslint-disable-next-line func-names
 const Timer = function () {
-  const [sec, setSec] = useState(10);
+  const [sec, setSec] = useState(15);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,9 +15,9 @@ const Timer = function () {
       clearTimeout(timer);
       // setSec("You finish!!");
     }
-  });
+  }, [sec]);
 
-  return <div className={`${styles.timer}`}>{sec === 0 ? "!" : sec}</div>;
+  return <div className={`${styles.timer}`}>{sec === 0 ? "0" : sec}</div>;
 };
 
 export default Timer;
