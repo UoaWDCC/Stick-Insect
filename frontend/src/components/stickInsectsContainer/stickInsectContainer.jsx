@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "./stickInsectContainer.module.css";
 
-export function StickInsectContainer() {
+function StickInsectContainer() {
   const [randLeftPos, setLeftPos] = useState(
     `${Math.floor(Math.random() * 80) + 10}`
   );
