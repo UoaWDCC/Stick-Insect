@@ -1,47 +1,41 @@
-// import React, { useState } from "react";
-// import styled from "styled-components";
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from "react";
+import styles from "./stickInsectContainer.module.css";
 
-// const StyledStickInsect = styled.div`
-//   & {
-//     position: absolute;
-//     top: ${(props) => props.topPos || Math.floor(Math.random() * 80) + 10}%;
-//     left: ${(props) => props.leftPos || Math.floor(Math.random() * 80) + 10}%;
-//     color: #ffffff;
-//     padding: 1rem;
-//     transform: rotate(${Math.floor(Math.random() * 180)}deg);
-//     background-color: #964b00;
-//   }
-// `;
+function StickInsectContainer() {
+  const [randLeftPos, setLeftPos] = useState(
+    `${Math.floor(Math.random() * 80) + 10}`
+  );
+  const [randTopPos, setTopPos] = useState(
+    `${Math.floor(Math.random() * 80) + 10}`
+  );
+  const [randDeg, setDeg] = useState(`${Math.floor(Math.random() * 180)}`);
 
-// const StyledInsectContainer = styled.div`
-//   & {
-//       position: relative;
-//       width: 100%
-//       height: 100%
-//     }
-// `;
+  const updateInsect = () => {
+    console.log("Found me!");
+    setLeftPos(Math.floor(Math.random() * 80) + 10);
+    setTopPos(Math.floor(Math.random() * 80) + 10);
+    setDeg(Math.floor(Math.random() * 180));
+  };
 
-// export function StickInsectContainer() {
-//   const [randLeftPos, setLeftPos] = useState("");
-//   const [randTopPos, setTopPos] = useState("");
+  const stickStyle = {
+    top: `${randTopPos}%`,
+    left: `${randLeftPos}%`,
+    transform: `rotate(${randDeg}deg)`,
+  };
 
-//   const updateInsect = () => {
-//     console.log("Found me!");
-//     setLeftPos(Math.floor(Math.random() * 80) + 10);
-//     setTopPos(Math.floor(Math.random() * 80) + 10);
-//   };
+  return (
+    <div className={styles.stick_insect_container}>
+      <div
+        className={styles.stick_insect}
+        style={stickStyle}
+        onClick={updateInsect}
+      >
+        Stick Insect
+      </div>
+    </div>
+  );
+}
 
-//   return (
-//     <StyledInsectContainer>
-//       <StyledStickInsect
-//         leftPos={randLeftPos}
-//         topPos={randTopPos}
-//         onClick={updateInsect}
-//       >
-//         Stick Insect
-//       </StyledStickInsect>
-//     </StyledInsectContainer>
-//   );
-// }
-
-// export default StickInsectContainer;
+export default StickInsectContainer;
