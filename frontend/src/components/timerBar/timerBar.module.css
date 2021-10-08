@@ -1,0 +1,18 @@
+.actualprogressbar {
+  height: 150px;
+  width: 50px;
+  background-color: green;
+  border-radius: 50;
+  margin: 50;
+}
+.overlayprogressbar {
+  width: 100%;
+  background-color: yellowgreen;
+  border-radius: inherit;
+}
+
+.textStyles {
+  padding: 5;
+  color: white;
+  font-weight: bold;
+}

@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./components/consentPage/consentPage";
 import InstructionPage from "./components/instructionPage/instructionPage";
 import LandingPage from "./components/landingPage/landingPage";
-import Timer from "./components/timer/timer";
-
+import GamePage from "./components/gamePage/gamePage";
 /**
  * This component is the parent of all components we have in our app.
  *
@@ -23,9 +22,9 @@ function App() {
   const PAGE_CONSENT = "consent";
   const PAGE_INSTRUCTION = "instruction";
   const PAGE_GAME = "game";
-  const PAGE_RESULTS = "results";
+  // const PAGE_RESULTS = "results";
 
-  const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
+  const [currentPage, setCurrentPage] = useState(PAGE_GAME);
 
   const switchPage = (page) => {
     setCurrentPage(page);
@@ -46,6 +45,8 @@ function App() {
         );
       case PAGE_INSTRUCTION:
         return <InstructionPage />;
+      case PAGE_GAME:
+        return <GamePage />;
       default:
         return null;
     }
@@ -55,7 +56,6 @@ function App() {
   return (
     <div className={styles.app}>
       <article className={styles.pageFrame}>{displayPage()}</article>
-      <Timer />
     </div>
   );
 }
