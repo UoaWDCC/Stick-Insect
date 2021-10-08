@@ -1,12 +1,8 @@
 import React from "react";
 import Timergroup from "../timergroup/timergroup";
-
-const GamePage = (props) => {
-
-import React, { useState, useEffect } from "react";
 import styles from "./gamePage.module.css";
 
-const GamePage = (props) => {
+const GamePage = () => {
   return (
     <section className={styles.whole_wrapper}>
       <header className={styles.header}>

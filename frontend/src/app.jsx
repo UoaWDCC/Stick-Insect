@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./components/consentPage/consentPage";
 import InstructionPage from "./components/instructionPage/instructionPage";
