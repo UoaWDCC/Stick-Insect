@@ -1,16 +1,10 @@
 import React from "react";
 import Timergroup from "../timergroup/timergroup";
+
+const GamePage = (props) => {
+
+import React, { useState, useEffect } from "react";
 import styles from "./gamePage.module.css";
-
-// const GamePage = () => {
-//   return (
-//     <div>
-//       <Timergroup />
-//     </div>
-//   );
-// };
-
-// export default GamePage;
 
 const GamePage = (props) => {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./components/consentPage/consentPage";
 import InstructionPage from "./components/instructionPage/instructionPage";
@@ -22,9 +22,9 @@ function App() {
   const PAGE_CONSENT = "consent";
   const PAGE_INSTRUCTION = "instruction";
   const PAGE_GAME = "game";
-  const PAGE_RESULTS = "results";
+  // const PAGE_RESULTS = "results";
 
-  const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
+  const [currentPage, setCurrentPage] = useState(PAGE_GAME);
 
   const switchPage = (page) => {
     setCurrentPage(page);
@@ -45,6 +45,8 @@ function App() {
         );
       case PAGE_INSTRUCTION:
         return <InstructionPage />;
+      case PAGE_GAME:
+        return <GamePage />;
       default:
         return null;
 
