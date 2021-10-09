@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.timergroup {
+  border: 2px solid red;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+.timerbar {
+  margin-top: 13px;
+  padding-left: 10px;
+}
+.timer {
+  margin-top: 25px;
+  padding-left: 20px;
+}

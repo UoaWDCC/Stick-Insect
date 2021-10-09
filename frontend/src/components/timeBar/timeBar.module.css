@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.timerbar {
+  border: 2px solid blue;
+  background-color: #9ab99d;
+  width: 20%;
+  height: 129px;
+}
+
+.timerbarinside {
+  background-color: rgb(143, 142, 142);
+  width: 50px;
+}

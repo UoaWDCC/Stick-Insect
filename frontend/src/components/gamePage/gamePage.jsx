@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./gamePage.module.css";
 import Timer from "../timer/timer";
 import TimerBar from "../timerBar/timerBar";
+import TimeBar from "../timeBar/timeBar";
+import TimerGroup from "../timerGroup/timerGroup";
 
 // eslint-disable-next-line
 const GamePage = (props) => {
@@ -17,6 +19,9 @@ const GamePage = (props) => {
           This is where we test out the timer and timer bars
           <div className={styles.body_wrapper}>
             <TimerBar sec={sec} />
+            <Timer />
+            <TimeBar />
+            <TimerGroup />
           </div>
         </p>
       </div>
