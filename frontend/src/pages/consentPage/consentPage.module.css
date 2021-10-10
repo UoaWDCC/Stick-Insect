@@ -21,6 +21,7 @@
   font-weight: 500;
 }
 
+/*delete below once working */
 .agreement_content {
   flex: 1;
   padding: 20px 40px;
@@ -35,22 +36,7 @@
   justify-content: center;
 }
 
-.btns button {
-  font-size: 25px;
-  font-weight: bold;
-  background-color: #386f3e;
-  color: white;
-  outline: none;
-  border: none;
-  margin: 15px;
-  padding: 15px 60px;
-  border-radius: 15px;
-}
-
-.btns button:hover {
-  background-color: #57965d;
-}
-
+/* not sure how to get rid of this stuff - aidan */
 @media only screen and (max-width: 610px) {
   .consent_page_header h1 {
     font-size: 20px;
