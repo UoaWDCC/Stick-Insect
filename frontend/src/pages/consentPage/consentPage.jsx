@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./consentPage.module.css";
+import Buttons, { ConsentButton } from "../../components/buttons/button";
+import Textbox, { ConsentTextbox } from "../../components/textbox/textbox";
 
 /**
  * This component is the Consent Page for our app
@@ -26,14 +28,8 @@ const ConsentPage = ({ switchToLandingPage, switchToInstructionPage }) => (
       </p>
     </div>
     <div className={styles.btns}>
-      <button onClick={switchToInstructionPage} type="button">
-        {" "}
-        I AGREE
-      </button>
-      <button onClick={switchToLandingPage} type="button">
-        {" "}
-        NO, TAKE ME AWAY
-      </button>
+      <ConsentButton func={switchToInstructionPage} text="I AGREE" />
+      <ConsentButton func={switchToLandingPage} text="NO, TAKE ME AWAY" />
     </div>
   </section>
 );

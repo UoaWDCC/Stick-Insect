@@ -1,0 +1,50 @@
+/* styles for 'play now' button on landing page */
+
+.play_btn {
+  border: none;
+  background-color: #cf8847;
+  font-size: 50px;
+  font-weight: bold;
+  width: 350px;
+  height: 70px;
+  transition: all 0.3s;
+  border-radius: 15px;
+}
+.play_btn:hover {
+  background-color: #bc6a21;
+}
+.play_btn:focus {
+  outline: none;
+}
+
+/* Consent Buttons */
+
+.consent_btn {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #386f3e;
+  color: white;
+  outline: none;
+  border: none;
+  margin: 15px;
+  padding: 15px 60px;
+  border-radius: 15px;
+}
+
+.consent_btn:hover {
+  background-color: #57965d;
+}
+
+@media only screen and (max-width: 610px) {
+  .consent_page_agreement_btns button {
+    font-size: 18px;
+    padding: 0 20px;
+    margin: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .consent_page_agreement_btns button {
+    font-size: 15px;
+  }
+}

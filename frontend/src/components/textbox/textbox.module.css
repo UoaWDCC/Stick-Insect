@@ -1,0 +1,33 @@
+/* Landing Page Body */
+.landing_body_content {
+  background-color: #c9dbcc;
+  padding: 30px;
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Consent Page Body */
+.agreement_content {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+.agreement_content p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 610px) {
+  .consent_page_header h1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .consent_page_header h1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

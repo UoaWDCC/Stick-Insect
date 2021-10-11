@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
-import ConsentPage from "./components/consentPage/consentPage";
-import InstructionPage from "./components/instructionPage/instructionPage";
-import LandingPage from "./components/landingPage/landingPage";
-import GamePage from "./components/gamePage/gamePage";
+import ConsentPage from "./pages/consentPage/consentPage";
+import InstructionPage from "./pages/instructionPage/instructionPage";
+import LandingPage from "./pages/landingPage/landingPage";
+import GamePage from "./pages/gamePage/gamePage";
 /**
  * This component is the parent of all components we have in our app.
  *
@@ -24,7 +24,7 @@ function App() {
   const PAGE_GAME = "game";
   // const PAGE_RESULTS = "results";
 
-  const [currentPage, setCurrentPage] = useState(PAGE_GAME);
+  const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
 
   const switchPage = (page) => {
     setCurrentPage(page);
@@ -34,7 +34,9 @@ function App() {
     switch (currentPage) {
       case PAGE_LANDING:
         return (
-          <LandingPage switchToConsentPage={() => switchPage(PAGE_CONSENT)} />
+          <>
+            <LandingPage switchToConsentPage={() => switchPage(PAGE_CONSENT)} />
+          </>
         );
       case PAGE_CONSENT:
         return (
