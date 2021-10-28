@@ -25,6 +25,7 @@ function App() {
   // const PAGE_RESULTS = "results";
 
   const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
+  const [isPlayedBefore, setIsPlayedBefore] = useState(false);
 
   const switchPage = (page) => {
     setCurrentPage(page);
@@ -46,7 +47,12 @@ function App() {
           />
         );
       case PAGE_INSTRUCTION:
-        return <InstructionPage />;
+        return (
+          <InstructionPage
+            setIsPlayedBefore={setIsPlayedBefore}
+            switchToGamePage={() => switchPage(PAGE_GAME)}
+          />
+        );
       case PAGE_GAME:
         return <GamePage />;
       default:
