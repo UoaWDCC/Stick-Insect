@@ -8,9 +8,9 @@ import GameBoard from "../../components/gameBoard/gameBoard";
 // eslint-disable-next-line
 const GamePage = (props) => {
   const REPEAT_TIME_MS = 1000;
-  const TIME_LIMIT_S = 15;
+  const TOTAL_SEC = 15;
   const TOTAL_ROUNDS = 20;
-  const [sec, setSec] = useState(TIME_LIMIT_S);
+  const [sec, setSec] = useState(TOTAL_SEC);
   const [isGameOver, setIsGameOver] = useState(false);
   const [timerHandler, setTimerHandler] = useState(null);
   const [round, setRound] = useState(1);
@@ -47,7 +47,12 @@ const GamePage = (props) => {
         <GameBoard />
       </section>
       <section className={styles.timer_group}>
-        <TimerGroup totalRounds={TOTAL_ROUNDS} currentRound={round} sec={sec} />
+        <TimerGroup
+          totalRounds={TOTAL_ROUNDS}
+          currentRound={round}
+          totalSec={TOTAL_SEC}
+          sec={sec}
+        />
       </section>
     </section>
   );
