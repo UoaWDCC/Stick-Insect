@@ -4,16 +4,16 @@
 }
 
 .timergroup {
-  border: 2px solid red;
-  height: 160px;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
-.timerbar {
+/* .timerbar {
   margin-top: 13px;
   padding-left: 10px;
 }
 .timer {
   margin-top: 25px;
   padding-left: 20px;
-}
+} */

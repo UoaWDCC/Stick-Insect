@@ -11,13 +11,11 @@
 .game_board {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
   position: relative;
 }
 
 .timer_group {
   width: 100%;
-  border: 1px solid blue;
   height: 120px;
 }
 

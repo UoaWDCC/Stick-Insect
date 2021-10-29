@@ -9,9 +9,11 @@ import GameBoard from "../../components/gameBoard/gameBoard";
 const GamePage = (props) => {
   const REPEAT_TIME_MS = 1000;
   const TIME_LIMIT_S = 15;
+  const TOTAL_ROUNDS = 20;
   const [sec, setSec] = useState(TIME_LIMIT_S);
   const [isGameOver, setIsGameOver] = useState(false);
   const [timerHandler, setTimerHandler] = useState(null);
+  const [round, setRound] = useState(1);
 
   const startTimer = () => {
     return setInterval(() => {
@@ -44,7 +46,9 @@ const GamePage = (props) => {
       <section className={styles.game_board}>
         <GameBoard />
       </section>
-      <section className={styles.timer_group} />
+      <section className={styles.timer_group}>
+        <TimerGroup totalRounds={TOTAL_ROUNDS} currentRound={round} />
+      </section>
       {/* <header className={styles.header}>
         <h1 className={styles.title}>This is the main game page</h1>
       </header>
