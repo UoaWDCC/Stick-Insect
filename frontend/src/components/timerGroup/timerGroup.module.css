@@ -7,7 +7,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: white;
   display: flex;
 }
 
@@ -17,6 +16,8 @@
 }
 
 .timer_container {
-  width: 120px;
-  border: 1px solid blue;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
