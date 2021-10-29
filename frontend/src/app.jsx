@@ -24,7 +24,7 @@ function App() {
   const PAGE_GAME = "game";
   // const PAGE_RESULTS = "results";
 
-  const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
+  const [currentPage, setCurrentPage] = useState(PAGE_GAME);
   const [isPlayedBefore, setIsPlayedBefore] = useState(false);
 
   const switchPage = (page) => {

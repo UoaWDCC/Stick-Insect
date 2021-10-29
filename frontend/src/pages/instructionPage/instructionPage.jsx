@@ -5,7 +5,8 @@ import styles from "./instructionPage.module.css";
  * This component is the Instruction Page for our app.
  *
  * receiving props:
- *   - TBD
+ *   - switchToGamePage
+ *   - setIsPlayedBefore: record whether the use played the game before
  */
 
 const InstructionPage = ({ switchToGamePage, setIsPlayedBefore }) => {
