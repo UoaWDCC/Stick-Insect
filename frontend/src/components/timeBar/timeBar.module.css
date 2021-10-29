@@ -2,11 +2,11 @@
   padding: 0;
   margin: 0;
 }
+
 .timerbar {
-  border: 2px solid blue;
   background-color: #9ab99d;
-  width: 20%;
-  height: 129px;
+  width: 30px;
+  height: 100%;
 }
 
 .timerbarinside {

@@ -47,19 +47,8 @@ const GamePage = (props) => {
         <GameBoard />
       </section>
       <section className={styles.timer_group}>
-        <TimerGroup totalRounds={TOTAL_ROUNDS} currentRound={round} />
+        <TimerGroup totalRounds={TOTAL_ROUNDS} currentRound={round} sec={sec} />
       </section>
-      {/* <header className={styles.header}>
-        <h1 className={styles.title}>This is the main game page</h1>
-      </header>
-      <div className={styles.body_wrapper}>
-        <p className={styles.content}>
-          This is where we test out the timer and timer bars
-          <div className={styles.body_wrapper}>
-            <TimerGroup />
-          </div>
-        </p>
-      </div> */}
     </section>
   );
 };

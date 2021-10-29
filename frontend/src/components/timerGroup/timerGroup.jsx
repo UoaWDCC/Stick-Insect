@@ -3,32 +3,11 @@ import Timer from "../timer/timer";
 import TimeBar from "../timeBar/timeBar";
 import styles from "./timerGroup.module.css";
 
-const TimerGroup = ({ totalRounds, currentRound }) => {
+const TimerGroup = ({ totalRounds, currentRound, sec }) => {
   return (
     <div className={`${styles.timergroup}`}>
-      {/* <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <TimeBar />
-      <Timer /> */}
+      <div className={styles.time_bars_container}>a</div>
+      <div className={styles.timer_container}>a</div>
     </div>
   );
 };

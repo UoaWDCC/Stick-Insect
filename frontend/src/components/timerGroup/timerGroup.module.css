@@ -8,12 +8,15 @@
   height: 100%;
   width: 100%;
   background-color: white;
+  display: flex;
 }
-/* .timerbar {
-  margin-top: 13px;
-  padding-left: 10px;
+
+.time_bars_container {
+  width: 100%;
+  border: 1px solid red;
 }
-.timer {
-  margin-top: 25px;
-  padding-left: 20px;
-} */
+
+.timer_container {
+  width: 120px;
+  border: 1px solid blue;
+}
