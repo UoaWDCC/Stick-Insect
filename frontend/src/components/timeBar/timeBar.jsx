@@ -5,7 +5,6 @@ const TimeBar = ({ totalSec, sec }) => {
   // Passes in the background colour and completion percentage as a prop
 
   const hightPercentage = parseInt((sec / totalSec) * 100, 10);
-  console.log(hightPercentage);
   return (
     // Implementation of the timerbar ,, { height: "progress%" })
     // Why is it bad to use jquery

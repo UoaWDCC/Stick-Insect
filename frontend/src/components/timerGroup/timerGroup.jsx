@@ -40,7 +40,7 @@ const TimerGroup = ({ totalRounds, currentRound, totalSec, sec }) => {
         <TimeBar totalSec={totalSec} sec={sec} />
       </div>
       <div className={styles.timer_container}>
-        <Timer />
+        <Timer sec={sec} />
       </div>
     </div>
   );

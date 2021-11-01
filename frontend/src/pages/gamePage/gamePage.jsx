@@ -44,7 +44,7 @@ const GamePage = (props) => {
   return (
     <section className={styles.whole_wrapper}>
       <section className={styles.game_board}>
-        <GameBoard />
+        <GameBoard currentRound={round} />
       </section>
       <section className={styles.timer_group}>
         <TimerGroup
