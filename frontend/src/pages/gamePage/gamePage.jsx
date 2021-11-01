@@ -11,7 +11,6 @@ const GamePage = (props) => {
   const TOTAL_SEC = 15;
   const TOTAL_ROUNDS = 20;
   const [sec, setSec] = useState(TOTAL_SEC);
-  const [isGameOver, setIsGameOver] = useState(false);
   const [timerHandler, setTimerHandler] = useState(null);
   const [round, setRound] = useState(1);
 
@@ -25,7 +24,11 @@ const GamePage = (props) => {
 
   const stopTimer = () => {
     clearInterval(timerHandler);
-    setIsGameOver(true);
+    if (round < TOTAL_ROUNDS) {
+      setSec(TOTAL_SEC);
+      setRound(round + 1);
+      setTimerHandler(startTimer());
+    }
   };
 
   useEffect(() => {
