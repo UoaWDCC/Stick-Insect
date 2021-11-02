@@ -4,6 +4,7 @@ import ConsentPage from "./pages/consentPage/consentPage";
 import InstructionPage from "./pages/instructionPage/instructionPage";
 import LandingPage from "./pages/landingPage/landingPage";
 import GamePage from "./pages/gamePage/gamePage";
+import ResultsPage from "./pages/resultsPage/resultsPage";
 /**
  * This component is the parent of all components we have in our app.
  *
@@ -22,10 +23,11 @@ function App() {
   const PAGE_CONSENT = "consent";
   const PAGE_INSTRUCTION = "instruction";
   const PAGE_GAME = "game";
-  // const PAGE_RESULTS = "results";
+  const PAGE_RESULTS = "results";
 
-  const [currentPage, setCurrentPage] = useState(PAGE_GAME);
+  const [currentPage, setCurrentPage] = useState(PAGE_RESULTS);
   const [isPlayedBefore, setIsPlayedBefore] = useState(false);
+  const [gameResults, setGameResults] = useState(null);
 
   const switchPage = (page) => {
     setCurrentPage(page);
@@ -54,7 +56,19 @@ function App() {
           />
         );
       case PAGE_GAME:
-        return <GamePage />;
+        return (
+          <GamePage
+            setGameResults={setGameResults}
+            switchToResultsPage={() => switchPage(PAGE_RESULTS)}
+          />
+        );
+      case PAGE_RESULTS:
+        return (
+          <ResultsPage
+            isPlayedBefore={isPlayedBefore}
+            gameResults={gameResults}
+          />
+        );
       default:
         return null;
     }
