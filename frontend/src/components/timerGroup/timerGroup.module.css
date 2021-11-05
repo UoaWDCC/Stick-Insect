@@ -4,16 +4,30 @@
 }
 
 .timergroup {
-  border: 2px solid red;
-  height: 160px;
+  width: 100%;
+  /* border: 2px solid red; */
+  /* height: 160px; */
   display: flex;
   justify-content: space-between;
 }
-.timerbar {
+/* .timerbar {
+  width: 5%;
   margin-top: 13px;
   padding-left: 10px;
-}
+} */
+/*
 .timer {
+  width: 20%;
   margin-top: 25px;
   padding-left: 20px;
-}
+} */
+
+/* @media (min-width: 792px) {
+  .timergroup {
+    width: 100%;
+    border: 2px solid black;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+} */

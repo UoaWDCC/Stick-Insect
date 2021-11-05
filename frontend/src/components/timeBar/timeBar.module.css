@@ -1,15 +1,51 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 .timerbar {
-  border: 2px solid blue;
+  /* border: 1px solid blue; */
   background-color: #9ab99d;
-  width: 20%;
-  height: 129px;
+  width: 2.1rem;
+  height: 75px;
+  margin: 5px 5px 5px 5px;
 }
 
 .timerbarinside {
   background-color: rgb(143, 142, 142);
-  width: 50px;
+  width: 2rem;
+}
+
+@media only screen and (min-width: 670px) and (max-width: 799px) {
+  .timerbar {
+    background-color: yellow;
+    width: 20px;
+  }
+  .timerbarinside {
+    background-color: pink;
+    width: 20px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1167px) {
+  .timerbar {
+    background-color: green;
+    width: 30px;
+  }
+  .timerbarinside {
+    background-color: blue;
+    width: 30px;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .timerbar {
+    background-color: black;
+
+    width: 4rem;
+  }
+  .timerbarinside {
+    background-color: red;
+    width: 4rem;
+  }
 }

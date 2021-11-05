@@ -4,14 +4,66 @@
 }
 
 .timer {
-  height: 100px;
-  width: 100px;
+  height: 45px;
+  width: 45px;
   display: flex;
   justify-content: center;
-  line-height: 100px;
+  line-height: 45px;
   border-radius: 50%;
   font-weight: 700;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: -4px;
   background-color: rgb(15, 15, 15);
+}
+
+@media (min-width: 670px) and (max-width: 799px) {
+  .timer {
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    line-height: 55px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgb(15, 15, 15);
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1167px) {
+  .timer {
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    line-height: 65px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: white;
+    font-size: 50px;
+    margin-top: 8px;
+    margin-left: 20px;
+    background-color: rgb(15, 15, 15);
+  }
+}
+@media (min-width: 1168px) {
+  .timer {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    line-height: 80px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: white;
+    font-size: 50px;
+    margin-top: 3px;
+    margin-left: 20px;
+    background-color: rgb(15, 15, 15);
+  }
 }

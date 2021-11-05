@@ -16,3 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media (min-width: 600px) and (maxi-width: 768) {
+  .timerbar {
+    background-color: black;
+  }
+}

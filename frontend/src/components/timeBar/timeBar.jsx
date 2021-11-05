@@ -5,10 +5,10 @@ const TimeBar = () => {
   // Passes in the background colour and completion percentage as a prop
 
   const [sec, setSec] = useState(15);
-  const [height, setHeight] = useState(sec * 8.6);
+  const [height, setHeight] = useState(sec * 5);
   useEffect(() => {
     setTimeout(() => {
-      setHeight(height - 8.6);
+      setHeight(height - 5);
       setSec(sec - 1);
     }, 1000);
   }, [sec]);
