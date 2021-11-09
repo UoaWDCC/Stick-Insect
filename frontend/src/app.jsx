@@ -25,7 +25,7 @@ function App() {
   const PAGE_GAME = "game";
   const PAGE_RESULTS = "results";
 
-  const [currentPage, setCurrentPage] = useState(PAGE_RESULTS);
+  const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
   const [isPlayedBefore, setIsPlayedBefore] = useState(false);
   const [gameResults, setGameResults] = useState(null);
 
