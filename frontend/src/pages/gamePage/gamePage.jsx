@@ -8,7 +8,7 @@ import GameBoard from "../../components/gameBoard/gameBoard";
 // eslint-disable-next-line
 const GamePage = ({ setGameResults, switchToResultsPage }) => {
   const REPEAT_TIME_MS = 1000;
-  const TOTAL_SEC = 3;
+  const TOTAL_SEC = 20;
   const TOTAL_ROUNDS = 20;
   const [sec, setSec] = useState(TOTAL_SEC);
   const [timerHandler, setTimerHandler] = useState(null);
