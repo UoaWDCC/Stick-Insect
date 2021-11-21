@@ -2,14 +2,18 @@
   padding: 0;
   margin: 0;
 }
+
 .timerbar {
-  border: 2px solid blue;
   background-color: #9ab99d;
-  width: 20%;
-  height: 129px;
+  width: 5%;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .timerbarinside {
   background-color: rgb(143, 142, 142);
-  width: 50px;
+  width: 100%;
+  /* height: 50%; */
 }
