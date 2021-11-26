@@ -1,1 +1,46 @@
 /* Implement css for ResultsPage component here */
+.whole_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #9ab99d;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-family: URW Chancery L, cursive;
+    font-weight: bold;
+    
+    font-size: 50px;
+}
+.play_btn {
+    border: none;
+    background-color: #cf8847;
+    font-size: 50px;
+    font-weight: bold;
+    width: 350px;
+    height: 70px;
+    transition: all 0.3s;
+    
+
+   
+}
+.play_btn:hover {
+    background-color: #bc6a21;
+}
+.email_btn{
+    border: none;
+    background-color: #356130;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    width: 60px;
+    height: 20px;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+    
+.email_btn:hover{
+    background-color: #42723d;
+}
+
+
+
