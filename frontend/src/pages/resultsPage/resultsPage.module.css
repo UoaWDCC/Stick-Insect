@@ -1,46 +1,85 @@
 /* Implement css for ResultsPage component here */
 .whole_wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: #9ab99d;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #9ab99d;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.title{
-    font-family: URW Chancery L, cursive;
-    font-weight: bold;
-    
-    font-size: 50px;
+.title {
+  font-family: URW Chancery L, cursive;
+  font-weight: bold;
+  margin-top: 100px;
+  font-size: 80px;
+}
+.thanks_message {
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.results_message {
+  margin-top: 15px;
+  font-size: 26px;
+}
+.results_info {
+  color: red;
+}
+.email_instruction_message {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.upper_text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .play_btn {
-    border: none;
-    background-color: #cf8847;
-    font-size: 50px;
-    font-weight: bold;
-    width: 350px;
-    height: 70px;
-    transition: all 0.3s;
-    
-
-   
+  border: none;
+  background-color: #cf8847;
+  font-size: 50px;
+  font-weight: bold;
+  width: 350px;
+  height: 70px;
+  transition: all 0.3s;
 }
 .play_btn:hover {
-    background-color: #bc6a21;
-}
-.email_btn{
-    border: none;
-    background-color: #356130;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    width: 60px;
-    height: 20px;
-    transition: all 0.3s;
-    margin-left: 10px;
-}
-    
-.email_btn:hover{
-    background-color: #42723d;
+  background-color: #bc6a21;
 }
 
+.email_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
 
+.email_label {
+  font-size: 24px;
+  margin-right: 10px;
+}
 
+.email_input {
+  font-size: 24px;
+  width: 350px;
+  padding-left: 10px;
+}
+.button_wrapper {
+  margin-top: 50px;
+}
+.email_btn {
+  border: none;
+  background-color: #356130;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 100px;
+  height: 30px;
+  transition: all 0.3s;
+  margin-left: 10px;
+  letter-spacing: 2px;
+}
+
+.email_btn:hover {
+  background-color: #42723d;
+}

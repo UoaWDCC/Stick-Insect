@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./gamePage.module.css";
-import Timer from "../../components/timer/timer";
-import TimerBar from "../../components/timeBar/timeBar";
 import TimerGroup from "../../components/timerGroup/timerGroup";
 import GameBoard from "../../components/gameBoard/gameBoard";
 
 // eslint-disable-next-line
 const GamePage = ({ setGameResults, switchToResultsPage }) => {
   const REPEAT_TIME_MS = 1000;
-  const TOTAL_SEC = 20;
+  const TOTAL_SEC = 15;
   const TOTAL_ROUNDS = 20;
   const [sec, setSec] = useState(TOTAL_SEC);
   const [timerHandler, setTimerHandler] = useState(null);
