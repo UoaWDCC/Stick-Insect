@@ -1,8 +1,7 @@
 .stick_insect {
   position: absolute;
   color: #ffffff;
-  padding: 1rem;
-  background-color: #964b00;
+  height: 15rem;
 }
 
 .stick_insect_container {
