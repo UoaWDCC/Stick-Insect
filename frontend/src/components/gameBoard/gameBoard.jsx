@@ -26,12 +26,12 @@ const backgroundImages = importAllImages(
  *   - Index, the number of the background image in the folder
  */
 function GameBoard(props) {
-  const { index } = props;
+  const { currentRound } = props;
 
   return (
     <div className={styles.background_wrapper}>
       <img
-        src={backgroundImages[`B${index}-TH1c.png`].default}
+        src={backgroundImages[`B${currentRound}-TH1c.png`].default}
         alt="Natural Scenery"
         className={styles.image_styles}
       />
