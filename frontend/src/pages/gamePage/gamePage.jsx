@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./gamePage.module.css";
-import Timer from "../../components/timer/timer";
-import TimerBar from "../../components/timeBar/timeBar";
 import TimerGroup from "../../components/timerGroup/timerGroup";
 import GameBoard from "../../components/gameBoard/gameBoard";
 
@@ -9,7 +7,7 @@ import GameBoard from "../../components/gameBoard/gameBoard";
 const GamePage = ({ setGameResults, switchToResultsPage }) => {
   const REPEAT_TIME_MS = 1000;
   const TOTAL_SEC = 20;
-  const TOTAL_ROUNDS = 20;
+  const TOTAL_ROUNDS = 13; // Note there need to be TOTAL_ROUNDS + 1 background images in assets
   const [sec, setSec] = useState(TOTAL_SEC);
   const [timerHandler, setTimerHandler] = useState(null);
   const [round, setRound] = useState(1);
@@ -62,7 +60,7 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
     <section className={styles.whole_wrapper}>
       {round}
       <section className={styles.game_board}>
-        <GameBoard currentRound={round} />
+        <GameBoard currentRound={round} stopTimer={stopTimer} />
       </section>
       <section className={styles.timer_group}>
         <TimerGroup currentRound={round} totalSec={TOTAL_SEC} sec={sec} />
