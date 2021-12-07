@@ -1,5 +1,15 @@
 .background_wrapper {
   height: 100%;
   width: 100%;
-  background-image: url(../../assets/images/backgrounds/B1-TH1c.png);
+  position: relative;
+}
+
+.image_styles,
+.stick_styles {
+  position: absolute;
+}
+
+.image_styles {
+  height: 100%;
+  width: 100%;
 }
