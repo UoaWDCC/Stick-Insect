@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./consentPage.module.css";
-import Buttons, { ConsentButton } from "../../components/buttons/button";
-import Textbox, { ConsentTextbox } from "../../components/textbox/textbox";
+import { ConsentButton } from "../../components/buttons/button";
 
 /**
  * This component is the Consent Page for our app

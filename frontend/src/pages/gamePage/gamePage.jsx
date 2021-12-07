@@ -6,7 +6,7 @@ import GameBoard from "../../components/gameBoard/gameBoard";
 // eslint-disable-next-line
 const GamePage = ({ setGameResults, switchToResultsPage }) => {
   const REPEAT_TIME_MS = 1000;
-  const TOTAL_SEC = 20;
+  const TOTAL_SEC = 15;
   const TOTAL_ROUNDS = 13; // Note there need to be TOTAL_ROUNDS + 1 background images in assets
   const [sec, setSec] = useState(TOTAL_SEC);
   const [timerHandler, setTimerHandler] = useState(null);

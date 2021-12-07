@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./landingPage.module.css";
-import Buttons, { PlayButton } from "../../components/buttons/button";
+import { PlayButton } from "../../components/buttons/button";
 import Logos from "../../components/logo/logo";
-import Textbox, { LandingTextbox } from "../../components/textbox/textbox";
+import { LandingTextbox } from "../../components/textbox/textbox";
 
 /**
  * This component is the Landing Page for our app
