@@ -2,7 +2,17 @@
 import React, { useState, useRef } from "react";
 import styles from "./resultsPage.module.css";
 
-const ResultsPage = (props) => {
+const ResultsPage = ({ isPlayedBefore, gameResults }) => {
+  const emailRef = useRef();
+  const handleClickEvent = () => {
+    const email = emailRef.current.value;
+    fetch("/email", {
+      method: "POST",
+      body: JSON.stringify(email),
+    })
+      .then((res) => res.text)
+      .then((data) => console.log(data));
+  };
   return (
     <section className={styles.whole_wrapper}>
       <h1 className={styles.title}>Spot the Stick Insect</h1>
@@ -25,9 +35,21 @@ const ResultsPage = (props) => {
       </p>
 
       <div className={styles.email_container}>
-        <label className={styles.email_label}> Email: </label>
-        <input className={styles.email_input} type="text" />
-        <button className={styles.email_btn}> SUBMIT</button>
+        <form>
+          <label className={styles.email_label} for="email">
+            Email:
+          </label>
+          <input
+            ref={emailRef}
+            className={styles.email_input}
+            type="email"
+            id="email"
+            name="email"
+          />
+          <button className={styles.email_btn} onClick={handleClickEvent}>
+            SUBMIT
+          </button>
+        </form>
       </div>
       <br />
       <div className={styles.button_wrapper}>
