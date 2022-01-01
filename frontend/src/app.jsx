@@ -67,6 +67,7 @@ function App() {
           <ResultsPage
             isPlayedBefore={isPlayedBefore}
             gameResults={gameResults.slice(0, 20)}
+            playAgain={() => setCurrentPage(PAGE_GAME)}
           />
         );
       default:

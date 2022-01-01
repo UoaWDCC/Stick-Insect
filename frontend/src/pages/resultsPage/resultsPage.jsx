@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./resultsPage.module.css";
 
-const ResultsPage = ({ isPlayedBefore, gameResults }) => {
+const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
   const [averageTime, setAverageTime] = useState(null);
   const [foundNum, setFoundNum] = useState(0);
 
@@ -51,7 +51,10 @@ const ResultsPage = ({ isPlayedBefore, gameResults }) => {
       </div>
       <br />
       <div className={styles.button_wrapper}>
-        <button className={styles.play_btn}> Try Again! </button>
+        <button className={styles.play_btn} onClick={playAgain}>
+          {" "}
+          Try Again!{" "}
+        </button>
       </div>
     </section>
   );
