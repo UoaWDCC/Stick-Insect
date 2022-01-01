@@ -58,7 +58,6 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
 
   return (
     <section className={styles.whole_wrapper}>
-      {round}
       <section className={styles.game_board}>
         <GameBoard currentRound={round} stopTimer={stopTimer} />
       </section>
