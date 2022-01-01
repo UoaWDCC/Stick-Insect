@@ -28,7 +28,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
   const [isPlayedBefore, setIsPlayedBefore] = useState(false);
   const [gameResults, setGameResults] = useState([]);
-
+  console.log("res app: ", gameResults);
   const switchPage = (page) => {
     setCurrentPage(page);
   };
@@ -66,7 +66,7 @@ function App() {
         return (
           <ResultsPage
             isPlayedBefore={isPlayedBefore}
-            gameResults={gameResults}
+            gameResults={gameResults.slice(0, 20)}
           />
         );
       default:
