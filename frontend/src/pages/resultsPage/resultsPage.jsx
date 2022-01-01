@@ -30,7 +30,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults }) => {
           stick instects out of <span className={styles.results_info}>20</span>,
           <br /> in an average time of
           <span className={styles.results_info}>
-            {" " + averageTime} seconds
+            {" " + Math.round(averageTime * 100) / 100} seconds
           </span>
           !
         </p>
