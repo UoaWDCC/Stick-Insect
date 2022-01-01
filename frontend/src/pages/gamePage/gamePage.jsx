@@ -61,7 +61,7 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
       {round}
       <section className={styles.game_board}>
         {round <= TOTAL_ROUNDS && (
-          <GameBoard currentRound={round} stopTimer={stopTimer} />
+          <GameBoard currentRound={round} moveToNextRound={stopTimer} />
         )}
       </section>
       <section className={styles.timer_group}>
