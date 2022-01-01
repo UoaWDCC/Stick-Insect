@@ -20,20 +20,29 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
     }, [REPEAT_TIME_MS]);
   };
 
-  const stopTimer = () => {
+  const processData = (isFound) => {
+    /**
+     * This is where we gather the game results at the end and send it to App.js
+     */
+    setGameResults((prevResults) => {
+      const newResults = [...prevResults];
+      newResults.push({
+        round,
+        isFound,
+        time: isFound ? TOTAL_SEC - sec : null,
+      });
+      return newResults;
+    });
+  };
+
+  const stopTimer = (isFound = false) => {
     clearInterval(timerHandler);
     if (round < TOTAL_ROUNDS + 1) {
       setSec(TOTAL_SEC);
       setRound(round + 1);
       setTimerHandler(startTimer());
     }
-  };
-
-  const processData = () => {
-    /**
-     * This is where we gather the game results at the end and send it to App.js
-     */
-    setGameResults({ results: "some results" });
+    processData(isFound);
   };
 
   useEffect(() => {

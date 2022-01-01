@@ -44,7 +44,7 @@ function StickInsectContainer({ index, moveToNextRound }) {
   };
 
   const handleInsectFound = () => {
-    moveToNextRound();
+    moveToNextRound(true);
     setTimeout(() => {
       updateInsect();
     }, 100);
