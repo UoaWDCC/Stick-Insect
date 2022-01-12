@@ -25,9 +25,7 @@ const backgroundImages = importAllImages(
  * receiving props:
  *   - Index, the number of the background image in the folder
  */
-function GameBoard(props) {
-  const { currentRound } = props;
-
+function GameBoard({ currentRound, moveToNextRound }) {
   return (
     <div className={styles.background_wrapper}>
       <img
@@ -35,7 +33,11 @@ function GameBoard(props) {
         alt="Natural Scenery"
         className={styles.image_styles}
       />
-      <StickInsectContainer index="1" className={styles.stick_styles} />
+      <StickInsectContainer
+        className={styles.stick_styles}
+        index="1"
+        moveToNextRound={moveToNextRound}
+      />
     </div>
   );
 }
