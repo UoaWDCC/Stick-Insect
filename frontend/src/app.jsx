@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./pages/consentPage/consentPage";
 import InstructionPage from "./pages/instructionPage/instructionPage";
@@ -28,10 +28,14 @@ function App() {
   const [currentPage, setCurrentPage] = useState(PAGE_LANDING);
   const [isPlayedBefore, setIsPlayedBefore] = useState(false);
   const [gameResults, setGameResults] = useState([]);
-  console.log("res app: ", gameResults);
+
   const switchPage = (page) => {
     setCurrentPage(page);
   };
+
+  useEffect(() => {
+    fetch("http://localhost:3001").then(console.log);
+  }, []);
 
   const displayPage = () => {
     switch (currentPage) {
