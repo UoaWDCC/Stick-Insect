@@ -33,8 +33,20 @@ function App() {
     setCurrentPage(page);
   };
 
+  const fetchData = async () => {
+    const res = await fetch("http://localhost:3001", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    const data = await res.json();
+    console.log(data);
+  };
+
   useEffect(() => {
-    fetch("http://localhost:3001").then(console.log);
+    fetchData();
   }, []);
 
   const displayPage = () => {
