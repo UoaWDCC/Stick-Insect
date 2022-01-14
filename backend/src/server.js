@@ -10,6 +10,16 @@ dotenv.config(); // enable the dotenv library
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.use(express.json()); // For all incoming request body express will recognize it as JSON format
 
 app.use("/email", emailRouter); // for all request url starting with :/email, emailRouter will handle it

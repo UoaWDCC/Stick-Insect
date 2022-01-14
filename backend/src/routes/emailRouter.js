@@ -16,18 +16,31 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const testEmail = new Email({
-    email: "testemail@wdcc.co.nz",
-  });
+  const testEmail = {
+    email: req.body.email,
+  };
   testEmail
     .save()
     .then((result) => {
       res.send(result);
+      console.log(result);
     })
     .catch((err) => {
       // eslint-disable-next-line no-console
       console.error(err);
     });
+  // const testEmail = new Email({
+  //   email: "testemail@wdcc.co.nz",
+  // });
+  // testEmail
+  //   .save()
+  //   .then((result) => {
+  //     res.send(result);
+  //   })
+  //   .catch((err) => {
+  //     // eslint-disable-next-line no-console
+  //     console.error(err);
+  //   });
 });
 
 export default router;

@@ -1,17 +1,21 @@
-/* eslint-disable */
 import React, { useState, useRef } from "react";
+import axios from "axios";
 import styles from "./resultsPage.module.css";
 
 const ResultsPage = ({ isPlayedBefore, gameResults }) => {
   const emailRef = useRef();
   const handleClickEvent = () => {
     const email = emailRef.current.value;
-    fetch("/email", {
-      method: "POST",
-      body: JSON.stringify(email),
-    })
-      .then((res) => res.text)
-      .then((data) => console.log(data));
+    axios
+      .post("http://localhost:3001/email", {
+        email,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   return (
     <section className={styles.whole_wrapper}>
@@ -36,7 +40,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults }) => {
 
       <div className={styles.email_container}>
         <form>
-          <label className={styles.email_label} for="email">
+          <label className={styles.email_label} htmlFor="email">
             Email:
           </label>
           <input
@@ -46,18 +50,21 @@ const ResultsPage = ({ isPlayedBefore, gameResults }) => {
             id="email"
             name="email"
           />
-          <button className={styles.email_btn} onClick={handleClickEvent}>
+          <button
+            type="button"
+            className={styles.email_btn}
+            onClick={handleClickEvent}
+          >
             SUBMIT
           </button>
         </form>
       </div>
       <br />
       <div className={styles.button_wrapper}>
-        <button className={styles.play_btn}> Try Again! </button>
+        {/* <button className={styles.play_btn}> Try Again! </button> */}
       </div>
     </section>
   );
 };
 
 export default ResultsPage;
-/* eslint-disable */

@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/games", (req, res) => {
   const testGame = new Game({
     rounds: [
       {
