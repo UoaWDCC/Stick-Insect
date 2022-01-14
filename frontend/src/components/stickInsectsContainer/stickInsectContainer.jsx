@@ -27,7 +27,7 @@ const stickInsectImages = importAllImages(
  * receiving props:
  *   - Index, the number of the specific stick insect image we want to use
  */
-function StickInsectContainer(props) {
+function StickInsectContainer({ index, moveToNextRound }) {
   const [randLeftPos, setLeftPos] = useState(
     `${Math.floor(Math.random() * 80) + 10}`
   );
@@ -43,20 +43,25 @@ function StickInsectContainer(props) {
     setDeg(Math.floor(Math.random() * 180));
   };
 
+  const handleInsectFound = () => {
+    moveToNextRound(true);
+    setTimeout(() => {
+      updateInsect();
+    }, 100);
+  };
+
   const stickStyle = {
     top: `${randTopPos}%`,
     left: `${randLeftPos}%`,
     transform: `rotate(${randDeg}deg)`,
   };
 
-  const { index } = props;
-
   return (
     <div className={styles.stick_insect_container}>
       <img
         className={styles.stick_insect}
         style={stickStyle}
-        onClick={updateInsect}
+        onClick={handleInsectFound}
         src={stickInsectImages[`th${index}.png`].default}
         alt="Stick Insect"
       />
