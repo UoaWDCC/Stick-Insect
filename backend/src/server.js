@@ -4,12 +4,14 @@ import dotenv from "dotenv"; // this is the library which enables us to use .env
 import gameRouter from "./routes/gameRouter.js";
 import emailRouter from "./routes/emailRouter.js";
 import connectDB from "./database/database.js";
+import cors from "cors";
 /* eslint-enable */
 
 dotenv.config(); // enable the dotenv library
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+app.use(cors());
 app.use(express.json()); // For all incoming request body express will recognize it as JSON format
 
 app.use("/email", emailRouter); // for all request url starting with :/email, emailRouter will handle it

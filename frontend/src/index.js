@@ -30,11 +30,16 @@ ReactDOM.render(
 //     alert(JSON.stringify(data));
 //   });
 
-fetch("http://localhost:3000/email", {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-}).then(console.log);
-// .then((response) => response.json())
-// .then((data) => console.log(data));
+const fetchData = async () => {
+  const res = await fetch("http://localhost:3001/email", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  });
+  const data = await res.json();
+  return data;
+};
+
+fetchData().then(console.log);
