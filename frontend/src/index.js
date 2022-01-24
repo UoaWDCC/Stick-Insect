@@ -29,3 +29,12 @@ ReactDOM.render(
 //   .then(function (data) {
 //     alert(JSON.stringify(data));
 //   });
+
+fetch("http://localhost:3000/email", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+}).then(console.log);
+// .then((response) => response.json())
+// .then((data) => console.log(data));

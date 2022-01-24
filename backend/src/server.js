@@ -17,7 +17,7 @@ app.use("/game", gameRouter); // for all request url starting with :/game, gameR
 
 app.get("/", (req, res) => {
   console.log("Received");
-  res.status(200).send("Welcome to STINS server");
+  res.status(200).send({ message: "Welcome to STINS server" });
 });
 
 // Error handling middleware
