@@ -25,7 +25,7 @@ const backgroundImages = importAllImages(
  * receiving props:
  *   - Index, the number of the background image in the folder
  */
-function GameBoard({ currentRound, moveToNextRound }) {
+function GameBoard({ currentRound, moveToNextRound, forcefulUpdater }) {
   return (
     <div className={styles.background_wrapper}>
       <img
@@ -37,6 +37,7 @@ function GameBoard({ currentRound, moveToNextRound }) {
         className={styles.stick_styles}
         index="1"
         moveToNextRound={moveToNextRound}
+        forcefulUpdater={forcefulUpdater}
       />
     </div>
   );

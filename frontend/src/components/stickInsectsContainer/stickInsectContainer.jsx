@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./stickInsectContainer.module.css";
 
 // Function imports all images from a file location
@@ -27,7 +27,7 @@ const stickInsectImages = importAllImages(
  * receiving props:
  *   - Index, the number of the specific stick insect image we want to use
  */
-function StickInsectContainer({ index, moveToNextRound }) {
+function StickInsectContainer({ index, moveToNextRound, forcefulUpdater }) {
   const [randLeftPos, setLeftPos] = useState(
     `${Math.floor(Math.random() * 80) + 10}`
   );
@@ -42,6 +42,12 @@ function StickInsectContainer({ index, moveToNextRound }) {
     setTopPos(Math.floor(Math.random() * 65) + 10);
     setDeg(Math.floor(Math.random() * 180));
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      updateInsect();
+    }, 100);
+  }, [forcefulUpdater]);
 
   const handleInsectFound = () => {
     moveToNextRound(true);

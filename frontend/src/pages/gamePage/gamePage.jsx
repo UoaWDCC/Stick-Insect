@@ -11,6 +11,7 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
   const [sec, setSec] = useState(TOTAL_SEC);
   const [timerHandler, setTimerHandler] = useState(null);
   const [round, setRound] = useState(1);
+  const [forcefulUpdater, setForcefulUpdater] = useState(0); // hacky way of updating stick insect when it is not found
 
   const startTimer = () => {
     return setInterval(() => {
@@ -24,6 +25,9 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
     /**
      * This is where we gather the game results at the end and send it to App.js
      */
+    if (!isFound) {
+      setForcefulUpdater(forcefulUpdater + 1);
+    }
     setGameResults((prevResults) => {
       const newResults = [...prevResults];
       newResults.push({
@@ -69,7 +73,11 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
     <section className={styles.whole_wrapper}>
       <section className={styles.game_board}>
         {round <= TOTAL_ROUNDS && (
-          <GameBoard currentRound={round} moveToNextRound={stopTimer} />
+          <GameBoard
+            currentRound={round}
+            moveToNextRound={stopTimer}
+            forcefulUpdater={forcefulUpdater}
+          />
         )}
       </section>
       <section className={styles.timer_group}>

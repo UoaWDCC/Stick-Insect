@@ -29,3 +29,18 @@ ReactDOM.render(
 //   .then(function (data) {
 //     alert(JSON.stringify(data));
 //   });
+
+// FETCH GET Example!!
+const fetchData = async () => {
+  const res = await fetch("http://localhost:3001/email", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  });
+  const data = await res.json();
+  return data;
+};
+
+fetchData().then(console.log);
