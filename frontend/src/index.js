@@ -44,3 +44,5 @@ const fetchData = async () => {
 };
 
 fetchData().then(console.log);
+
+// POST EXAMPLE sending email to backend

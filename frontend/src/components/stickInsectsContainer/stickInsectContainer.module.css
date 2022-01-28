@@ -2,6 +2,7 @@
   position: absolute;
   color: #ffffff;
   height: 15rem;
+  user-select: none;
 }
 
 .stick_insect_container {

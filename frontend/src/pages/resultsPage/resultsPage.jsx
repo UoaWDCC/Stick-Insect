@@ -41,7 +41,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
         leave <br /> your email address below. If you choose to supply your
         email address, <br />
         we will not for any other purpose, nor will we supply it to any third
-        party.{" "}
+        party.
       </p>
 
       <div className={styles.email_container}>
@@ -52,8 +52,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
       <br />
       <div className={styles.button_wrapper}>
         <button className={styles.play_btn} onClick={playAgain}>
-          {" "}
-          Try Again!{" "}
+          Try Again!
         </button>
       </div>
     </section>
