@@ -17,15 +17,14 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const testEmail = new Email({
-    email: "testemail@wdcc.co.nz",
+    email: req.body.email,
   });
   testEmail
     .save()
     .then((result) => {
-      res.send(result);
+      res.send(req.body);
     })
     .catch((err) => {
-      // eslint-disable-next-line no-console
       console.error(err);
     });
 });

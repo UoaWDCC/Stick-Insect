@@ -1,10 +1,28 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
 import styles from "./resultsPage.module.css";
+import axios from "axios";
 
 const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
   const [averageTime, setAverageTime] = useState(null);
   const [foundNum, setFoundNum] = useState(0);
+  const [email, setEmail] = useState("");
+
+  const dispatchEmail = async () => {
+    const res = await fetch("http://localhost:3001/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        email,
+      }),
+    });
+    const data = await res.json();
+    alert("Sent!");
+    return data;
+  };
 
   useEffect(() => {
     const foundRounds = gameResults.filter((round) => round.isFound === true);
@@ -44,11 +62,22 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
         party.
       </p>
 
-      <div className={styles.email_container}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatchEmail();
+        }}
+        className={styles.email_container}
+      >
         <label className={styles.email_label}> Email: </label>
-        <input className={styles.email_input} type="text" />
+        <input
+          className={styles.email_input}
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <button className={styles.email_btn}> SUBMIT</button>
-      </div>
+      </form>
       <br />
       <div className={styles.button_wrapper}>
         <button className={styles.play_btn} onClick={playAgain}>
