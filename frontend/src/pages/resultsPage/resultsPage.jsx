@@ -59,13 +59,13 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
         leave <br /> your email address below. If you choose to supply your
         email address, <br />
         we will not for any other purpose, nor will we supply it to any third
-        party.
       </p>
 
       <form
         onSubmit={(e) => {
           e.preventDefault();
           dispatchEmail();
+          setEmail("");
         }}
         className={styles.email_container}
       >
