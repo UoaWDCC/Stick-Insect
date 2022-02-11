@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
 import styles from "./resultsPage.module.css";
-import axios from "axios";
 
 const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
   const [averageTime, setAverageTime] = useState(null);
