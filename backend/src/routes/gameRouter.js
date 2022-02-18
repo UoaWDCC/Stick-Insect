@@ -17,28 +17,10 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const testGame = new Game({
-    rounds: [
-      {
-        roundNum: 1,
-        backgroundId: "bg2",
-        timeTaken: 7,
-        isFound: true,
-      },
-      {
-        roundNum: 2,
-        backgroundId: "bg2",
-        timeTaken: 3,
-        isFound: true,
-      },
-      {
-        roundNum: 3,
-        backgroundId: "bg1",
-        timeTaken: 14,
-        isFound: false,
-      },
-    ],
-    isFirstAttempt: false,
+    rounds: req.body.rounds,
+    isFirstAttempt: req.body.isFirstAttempt,
   });
+  console.log(testGame);
   testGame
     .save()
     .then((result) => {
