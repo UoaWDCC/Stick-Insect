@@ -22,7 +22,7 @@ const TimerGroup = ({ currentRound, totalSec, sec }) => {
         })}
       </div>
       <div className={styles.timer_container}>
-        <Timer sec={sec} />
+        <Timer sec={Math.round(sec)} />
       </div>
     </div>
   );

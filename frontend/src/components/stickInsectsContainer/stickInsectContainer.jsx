@@ -68,7 +68,9 @@ function StickInsectContainer({ index, moveToNextRound, forcefulUpdater }) {
         className={styles.stick_insect}
         style={stickStyle}
         onClick={handleInsectFound}
-        src={stickInsectImages[`th${index}.png`].default}
+        // src={stickInsectImages[`th${index}.png`].default}
+        // th2.png edited to have -7 Hue, -52 Saturation, +10 Lightness and is 85% Opacity from th1.png
+        src={stickInsectImages[`th2.png`].default}
         alt="Stick Insect"
       />
     </div>
