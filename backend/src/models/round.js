@@ -3,15 +3,11 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const roundSchema = new Schema({
-  roundNum: {
+  round: {
     type: Number,
     required: true,
   },
-  backgroundId: {
-    type: String,
-    required: true,
-  },
-  timeTaken: {
+  time: {
     type: Number,
     required: true,
   },

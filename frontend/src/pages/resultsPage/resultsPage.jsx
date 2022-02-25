@@ -7,6 +7,23 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
   const [foundNum, setFoundNum] = useState(0);
   const [email, setEmail] = useState("");
 
+  const sendResult = async () => {
+    const res = await fetch("http://localhost:3001/game", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        rounds: gameResults,
+        isFirstAttempt: isPlayedBefore,
+      }),
+    });
+    const data = await res.json();
+    alert("Sent!");
+    return data;
+  };
+
   const dispatchEmail = async () => {
     const res = await fetch("http://localhost:3001/email", {
       method: "POST",
@@ -20,6 +37,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
     });
     const data = await res.json();
     alert("Sent!");
+    sendResult();
     return data;
   };
 
@@ -64,6 +82,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
         onSubmit={(e) => {
           e.preventDefault();
           dispatchEmail();
+
           setEmail("");
         }}
         className={styles.email_container}
