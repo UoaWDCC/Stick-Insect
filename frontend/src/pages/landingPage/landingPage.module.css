@@ -4,6 +4,7 @@
   background-color: #9ab99d;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header_wrapper {
@@ -21,11 +22,12 @@
 .body_wrapper {
   height: 300px;
   padding: 30px;
+  margin-bottom: 100px;
 }
 
 .bottom_wrapper {
+  height: 200px;
   position: relative;
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
