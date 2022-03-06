@@ -8,7 +8,7 @@ const roundSchema = new Schema({
     required: true,
   },
   time: {
-    type: Number,
+    type: String,
     required: true,
   },
   isFound: {
