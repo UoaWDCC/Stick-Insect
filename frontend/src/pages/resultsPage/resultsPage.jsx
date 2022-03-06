@@ -8,6 +8,7 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
   const [email, setEmail] = useState("");
 
   const sendResult = async () => {
+    console.log("data sent");
     const res = await fetch("http://localhost:3001/game", {
       method: "POST",
       headers: {
@@ -16,11 +17,10 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
       },
       body: JSON.stringify({
         rounds: gameResults,
-        isFirstAttempt: isPlayedBefore,
+        isFirstAttempt: !isPlayedBefore,
       }),
     });
     const data = await res.json();
-    alert("Sent!");
     return data;
   };
 
@@ -36,10 +36,13 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
       }),
     });
     const data = await res.json();
-    alert("Sent!");
-    sendResult();
+    alert("Your email has been sent!");
     return data;
   };
+
+  useEffect(() => {
+    sendResult();
+  }, []);
 
   useEffect(() => {
     const foundRounds = gameResults.filter((round) => round.isFound === true);
@@ -76,14 +79,16 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
         leave <br /> your email address below. If you choose to supply your
         email address, <br />
         we will not for any other purpose, nor will we supply it to any third
+        party.
       </p>
 
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          dispatchEmail();
-
-          setEmail("");
+          if (email !== "") {
+            dispatchEmail();
+            setEmail("");
+          }
         }}
         className={styles.email_container}
       >

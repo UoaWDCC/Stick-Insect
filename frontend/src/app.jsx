@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./app.module.css";
 import ConsentPage from "./pages/consentPage/consentPage";
 import InstructionPage from "./pages/instructionPage/instructionPage";
@@ -33,6 +33,9 @@ function App() {
     setCurrentPage(page);
   };
 
+  useEffect(() => {
+    console.log("GR: ", gameResults);
+  }, [gameResults]);
   const displayPage = () => {
     switch (currentPage) {
       case PAGE_LANDING:

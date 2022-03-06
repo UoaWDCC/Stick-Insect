@@ -25,15 +25,19 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
     /**
      * This is where we gather the game results at the end and send it to App.js
      */
+    let isFoundVal;
     if (!isFound) {
       setForcefulUpdater(forcefulUpdater + 1);
+      isFoundVal = false;
+    } else {
+      isFoundVal = true;
     }
     setGameResults((prevResults) => {
       const newResults = [...prevResults];
       newResults.push({
         round,
-        isFound,
-        time: isFound ? TOTAL_SEC - sec : null,
+        isFound: isFoundVal,
+        time: isFoundVal ? `${TOTAL_SEC - sec}` : "-",
       });
       return newResults;
     });
@@ -41,12 +45,12 @@ const GamePage = ({ setGameResults, switchToResultsPage }) => {
 
   const stopTimer = (isFound = false) => {
     clearInterval(timerHandler);
+    processData(isFound);
     if (round < TOTAL_ROUNDS + 1) {
       setSec(TOTAL_SEC);
       setRound(round + 1);
       setTimerHandler(startTimer());
     }
-    processData(isFound);
   };
 
   useEffect(() => {
