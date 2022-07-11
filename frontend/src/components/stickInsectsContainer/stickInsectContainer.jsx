@@ -37,7 +37,6 @@ function StickInsectContainer({ index, moveToNextRound, forcefulUpdater }) {
   const [randDeg, setDeg] = useState(`${Math.floor(Math.random() * 180)}`);
 
   const updateInsect = () => {
-    console.log("Found me!");
     setLeftPos(Math.floor(Math.random() * 75) + 10);
     setTopPos(Math.floor(Math.random() * 75) + 10);
     setDeg(Math.floor(Math.random() * 180));

@@ -33,9 +33,6 @@ function App() {
     setCurrentPage(page);
   };
 
-  useEffect(() => {
-    console.log("GR: ", gameResults);
-  }, [gameResults]);
   const displayPage = () => {
     switch (currentPage) {
       case PAGE_LANDING:

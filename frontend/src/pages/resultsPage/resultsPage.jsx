@@ -8,7 +8,6 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
   const [email, setEmail] = useState("");
 
   const sendResult = async () => {
-    console.log("data sent");
     const res = await fetch("http://localhost:3001/game", {
       method: "POST",
       headers: {
@@ -48,12 +47,11 @@ const ResultsPage = ({ isPlayedBefore, gameResults, playAgain }) => {
     const foundRounds = gameResults.filter((round) => round.isFound === true);
     let totalTime = 0;
     foundRounds.map((round) => {
-      totalTime = totalTime + round.time;
+      totalTime = Number(totalTime) + Number(round.time);
     });
     for (const round of foundRounds) {
-      totalTime = totalTime + round.time;
+      totalTime = Number(totalTime) + Number(round.time);
     }
-
     setAverageTime(totalTime / foundRounds.length);
     setFoundNum(foundRounds.length);
   }, []);
