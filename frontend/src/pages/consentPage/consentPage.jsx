@@ -16,7 +16,7 @@ const ConsentPage = ({ switchToLandingPage, switchToInstructionPage }) => (
       <h1>Participant Information and Consent Form</h1>
     </header>
     <div className={styles.agreement_content}>
-      <p>By clicking agree below...</p>
+      <p>We may collect data from your game play for research purposes.</p>
     </div>
     <div className={styles.btns}>
       <ConsentButton func={switchToInstructionPage} text="I AGREE" />
