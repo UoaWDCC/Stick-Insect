@@ -12,6 +12,9 @@
     "prettier": "prettier --check src",
     "prettify": "prettier --write src"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "author": "WDCC",
   "license": "ISC",
   "dependencies": {
