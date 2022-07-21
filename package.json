@@ -1,0 +1,6 @@
+{
+    "scripts": {
+      "heroku-prebuild": "cd backend",
+      "start": "cd backend && npm start"
+    }
+  }
