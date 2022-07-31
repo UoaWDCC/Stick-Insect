@@ -3,14 +3,6 @@
     "heroku-prebuild": "cd backend",
     "start": "cd backend && npm start"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "*",
-    "body-parser": "*",
-    "mongodb": "^3.6.10",
-    "mongoose": "^5.13.6"
-  },
   "engines": {
     "node": "14.x"
   }
