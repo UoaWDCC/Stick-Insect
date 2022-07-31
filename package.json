@@ -1,6 +1,9 @@
 {
-    "scripts": {
-      "heroku-prebuild": "cd backend",
-      "start": "cd backend && npm start"
-    }
+  "scripts": {
+    "heroku-prebuild": "cd backend",
+    "start": "cd backend && npm start"
+  },
+  "engines": {
+    "node": "14.x"
   }
+}
